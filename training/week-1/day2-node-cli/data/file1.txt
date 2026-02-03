@@ -1,0 +1,4 @@
+Hello
+This is text file one.
+This file contains duplicate lines.
+This file contains duplicate lines.
