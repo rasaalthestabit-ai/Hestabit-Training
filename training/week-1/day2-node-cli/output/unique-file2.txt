@@ -1,0 +1,3 @@
+This is text file two.
+We are making a command line tool which is a program that we run on the terminal to get the desired output and files.
+It counts characters, words and lines and also processes the time and memory used.
