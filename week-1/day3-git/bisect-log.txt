@@ -1,0 +1,14 @@
+git bisect start
+# status: waiting for both good and bad commits
+# bad: [fbee4ab4f31c5ce48b4c8bda762a6cc8f77afab7] Commit 10
+git bisect bad fbee4ab4f31c5ce48b4c8bda762a6cc8f77afab7
+# status: waiting for good commit(s), bad commit known
+# good: [3749c66eb7fc55c358006bc4acaf25610f3832ea] Commit 4: working version 4
+git bisect good 3749c66eb7fc55c358006bc4acaf25610f3832ea
+# bad: [8e36f8e68de2edcdd758ea78363d41c56eee8168] Commit 7
+git bisect bad 8e36f8e68de2edcdd758ea78363d41c56eee8168
+# bad: [7b60a6f32e221da91d74e9730ace41ec724a0f16] Commit 6
+git bisect bad 7b60a6f32e221da91d74e9730ace41ec724a0f16
+# bad: [ee7279059decc35b12672ed698ff9d2d02acf1ae] Commit 5: introduce syntax error
+git bisect bad ee7279059decc35b12672ed698ff9d2d02acf1ae
+# first bad commit: [ee7279059decc35b12672ed698ff9d2d02acf1ae] Commit 5: introduce syntax error
