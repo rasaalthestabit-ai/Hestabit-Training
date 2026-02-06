@@ -1,7 +1,7 @@
 #!/bin/bash
  
 while true; do
-    curl http://localhost:3000/
+    STATUS=$(/usr/bin/curl -s -o /dev/null -w "%{http_code}" $URL)
     exitCode=$?
     if [ ${exitCode} -ne 0 ]; then
         echo "$(date '+%Y-%m-%d %H:%M:%S') - FAILURE: Server not reachable. Exit Code: $exitCode" >> "./logs/health.log"
