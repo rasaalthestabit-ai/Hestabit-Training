@@ -1,5 +1,5 @@
 #!/bin/bash
- 
+URL="http://localhost:3000/"
 while true; do
     STATUS=$(/usr/bin/curl -s -o /dev/null -w "%{http_code}" $URL)
     exitCode=$?
