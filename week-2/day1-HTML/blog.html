@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Page using semantic html only.</title>
+</head>
+<body>
+    <header>
+        <h1>Tech Insights Blog</h1>
+        <p>Exploring web development, design, programming and emerging technologies.</p>
+    </header>
+    <nav aria-label="Main Navigation">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#articles">Articles</a></li>
+            <li><a href="#canvas">Canvas</a></li>
+            <li><a href="#newsletter">NewsLetter</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="articles">
+            <h2>Latest Articles</h2>
+            <article>
+                <header>
+                    <h3>Understanding Semantic HTML</h3>
+                    <p>By Pseudonomous | Feb 2026</p>
+                </header>
+                <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aHRtbHxlbnwwfHwwfHx8MA%3D%3D" alt="Semantic HTML structure illustration">
+                <p>
+                    Semantic HTML introduces meaning to web structure, improving accessibility,
+    SEO, and maintainability of modern web applications.
+                </p>
+                <footer>
+                    <a href="#">Read more</a>
+                </footer>
+            </article>
+
+            <article>
+                <header>
+                    <h3>Getting started with CSS Grid</h3>
+                    <p>By Anonymous | Feb 2026
+                    </p>
+                </header>
+                <img src="https://images.unsplash.com/photo-1524666643752-b381eb00effb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGNzc3xlbnwwfHwwfHx8MA%3D%3D" alt="CSS Grid illustration">
+                <p>
+                    CSS Grid allows developers to build complex two-dimensional layouts easily,
+    making responsive design more efficient.
+                </p>
+                <footer>
+                    <a href="#">Read more</a>
+                </footer>
+            </article>
+        </section>
+        <section>
+            <h2>Featured Media</h2>
+
+            <video controls width="400" aria-label="Introduction to semantic HTML video">
+                <source src="video.mp4">
+            </video>
+            <br>
+            <br>
+            <audio controls aria-label="Podcast discussing web accessibility">
+                <source src="audio.wav">
+            </audio>
+        </section>
+        <section id="canvas" tabindex="0" aria-label="Interactive canvas area for future graphics">
+            <h2>Interactive Canvas Demo</h2>
+            <canvas width="400" height="200">
+                Your browser does not support canvas element.
+            </canvas>
+        </section>
+    </main>
+    <aside>
+        <section>
+            <h2>Categories</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Accessibility</li>
+            </ul>
+        </section>
+        <section id="newsletter">
+            <h2>NewsLetter SignUp</h2>
+            <form aria-label="Newsletter Signup Form">
+                <label for="name">Name</label><br>
+                <input id="name" type="text" required><br><br>
+
+                <label for="email">Email</label><br>
+                <input id="email" type="email" required><br><br>
+
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+    </aside>
+    <footer>
+        <p>&copy; 2026 Tech Insights Blog</p>
+        <nav>
+            <ul>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Terms</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>
