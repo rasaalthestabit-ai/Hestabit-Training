@@ -1,0 +1,33 @@
+.answer{
+    display: none;
+    margin-top: 10px;
+    background: pink;
+    padding: 30px;
+}
+.faq-item{
+    border: 5px solid black;
+    padding: 30px 10px 10px 10px;
+    width: 70%;
+    background: rgb(129, 129, 180);
+    margin: 0% 15%;
+    margin-bottom: 1%;
+}
+.question{
+    display: flex;
+    justify-content: space-between;
+}
+.toggle-btn{
+    background: black;
+    color: white;
+    font-weight: bold;
+}
+body{
+    font-size: 22px;
+}
+
+@media (max-width: 768px){
+    .faq-item{
+        width: 90%;
+        margin: 2%;
+    }
+}
