@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Products</title>
+
+  <link rel="stylesheet" href="css/product.css">
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <h1>MyStore</h1>
+  </nav>
+
+  <!-- Search + Sort -->
+  <section class="controls">
+    <input 
+      type="text" 
+      id="searchInput" 
+      placeholder="Search products..."
+    />
+
+    <select id="sortPrice">
+      <option value="">Sort by price</option>
+      <option value="high">High → Low</option>
+    </select>
+  </section>
+
+  <!-- Products grid -->
+  <section id="productContainer" class="product-grid"></section>
+
+  <script src="js/api.js"></script>
+  <script src="js/products.js"></script>
+</body>
+</html>
