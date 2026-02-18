@@ -1,16 +1,33 @@
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 export default function Sidebar() {
+  const pathname = usePathname();
+
+  const linkClass = (path) =>
+    `block px-4 py-2 rounded-lg ${
+      pathname === path ? "bg-blue-500 text-white" : "text-gray-700 hover:bg-gray-100"
+    }`;
+
   return (
-    <div className="w-64 h-screen bg-gray-900 text-white p-5">
-      
-      <h2 className="text-lg font-bold mb-6">Menu</h2>
+    <aside className="w-64 h-screen bg-white border-r p-4 space-y-4">
+      <h2 className="text-xl font-bold">Dashboard</h2>
 
-      <ul className="space-y-4">
-        <li className="cursor-pointer hover:text-gray-300">Dashboard</li>
-        <li className="cursor-pointer hover:text-gray-300">Users</li>
-        <li className="cursor-pointer hover:text-gray-300">Analytics</li>
-        <li className="cursor-pointer hover:text-gray-300">Settings</li>
-      </ul>
+      <nav className="space-y-2">
+        <Link href="/dashboard" className={linkClass("/dashboard")}>
+          Dashboard
+        </Link>
 
-    </div>
+        <Link href="/dashboard/profile" className={linkClass("/dashboard/profile")}>
+          Profile
+        </Link>
+
+        <Link href="/about" className={linkClass("/about")}>
+          About
+        </Link>
+      </nav>
+    </aside>
   );
 }
