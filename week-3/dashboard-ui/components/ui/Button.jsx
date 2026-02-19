@@ -7,7 +7,7 @@ export default function Button({
   const base = "rounded-lg font-medium transition";
 
   const variants = {
-    primary: "bg-blue-600 text-white hover:bg-blue-700",
+    primary: "bg-pink-500 text-white hover:bg-gray-500",
     secondary: "bg-gray-200 text-gray-800 hover:bg-gray-300",
     danger: "bg-red-600 text-white hover:bg-red-700",
   };

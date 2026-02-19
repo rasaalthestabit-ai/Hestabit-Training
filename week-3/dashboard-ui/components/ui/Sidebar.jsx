@@ -8,11 +8,11 @@ export default function Sidebar() {
 
   const linkClass = (path) =>
     `block px-4 py-2 rounded-lg ${
-      pathname === path ? "bg-blue-500 text-white" : "text-gray-700 hover:bg-gray-100"
+      pathname === path ? "bg-pink-500 text-white" : "text-gray-500 hover:bg-gray-100"
     }`;
 
   return (
-    <aside className="w-64 h-screen bg-white border-r p-4 space-y-4">
+    <aside className="w-64 min-h-screen bg-white border-r p-4 space-y-4">
       <h2 className="text-xl font-bold">Dashboard</h2>
 
       <nav className="space-y-2">
