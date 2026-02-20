@@ -15,10 +15,14 @@ export default function Navbar() {
         <Input placeholder="Search..." />
 
         <span
-          onClick={() => router.push("/signin")}
+          onClick={() => router.push("/signup")}
           className="cursor-pointer text-sm font-medium text-gray-700 hover:text-black transition"
         >
-          SignIn
+          SignUp
+        </span>
+
+        <span onClick={() => router.push("/login")} className="cursor-pointer text-sm font-medium text-gray-700 hover:text-black transition">
+          LogIn
         </span>
 
         <span

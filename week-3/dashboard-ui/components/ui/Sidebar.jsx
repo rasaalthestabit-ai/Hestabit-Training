@@ -24,6 +24,14 @@ export default function Sidebar() {
           Profile
         </Link>
 
+        <Link href="/dashboard/users" className={linkClass("/dashboard/users")}>
+          Users
+        </Link>
+
+        <Link href="/dashboard/billing" className={linkClass("/dashboard/billing")}>
+          Billing
+        </Link>
+
         <Link href="/about" className={linkClass("/about")}>
           About
         </Link>
