@@ -1,4 +1,6 @@
 require("./config");
+require("./models/Account");
+require("./models/Order");
 const logger = require("./utils/logger");
 const connectDB = require("./loaders/db");
 const initApp = require("./loaders/app");
