@@ -1,54 +1,68 @@
 const mongoose = require("mongoose");
+const config = require("./src/config");
 
-const AccountRepository = require("./src/repositories/account.repository");
-const OrderRepository = require("./src/repositories/order.repository");
-
-require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV || "local"}`
-});
+const Account = require("./src/models/Account");
+const Order = require("./src/models/Order");
 
 async function runTest() {
 
-    try{
+  try {
 
-        await mongoose.connect(process.env.DB_URI);
+    await mongoose.connect(config.dbUrl);
 
-        console.log("Database Connected");
-
-        const account = await AccountRepository.create({
-
-            firstName:"John",
-            lastName:"Doe",
-            email:"john@test.com",
-            password:"123456"
-
-        });
-
-        console.log("Account Created:");
-        console.log(account);
-
-        const order = await OrderRepository.create({
-
-            accountId: account._id,
-            totalAmount: 500
-
-        });
-
-        console.log("Order Created:");
-        console.log(order);
+    console.log("Database connected");
 
 
-        await mongoose.disconnect();
+    /*
+    Create Account
+    */
 
-        console.log("Database Disconnected");
+    const account = await Account.create({
 
-    }
-    catch(err){
+      firstName: "Rasaal",
+      lastName: "Tewari",
+      email: "rasaal@test.com",
+      password: "123456"
 
-        console.error("Test Failed");
-        console.error(err);
+    });
 
-    }
+    console.log("Account Created:");
+    console.log(account);
+
+
+    /*
+    Create Order
+    */
+
+    const order = await Order.create({
+
+      accountId: account._id,
+
+      amount: 500,
+
+      items: [
+        {
+          name: "Laptop",
+          price: 500,
+          quantity: 1
+        }
+      ]
+
+    });
+
+    console.log("Order Created:");
+    console.log(order);
+
+
+    process.exit();
+
+  } catch (error) {
+
+    console.error(error);
+
+    process.exit(1);
+
+  }
 
 }
 

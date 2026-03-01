@@ -2,19 +2,26 @@ const mongoose = require("mongoose");
 const config = require("../config");
 const logger = require("../utils/logger");
 
+async function connectDB() {
 
+  try {
 
-const connectDB = async () => {
-    const dbUrl = `mongodb://${config.database.host}:${config.database.port}/${config.database.name}`;
+    await mongoose.connect(config.dbUrl,{
+      serverSelectionTimeoutMS: 5000
+    });
 
-    try{
-        await mongoose.connect(dbUrl);
-        logger.info(`Database connected : ${config.database.name}@${config.database.host}:${config.database.port}`)
-    }
-    catch (error){
-        logger.error("Database connection failed");
-        logger.error(error.message);
-        process.exit(1);
-    }
-};
+    logger.info("Database connected");
+
+  } catch (error) {
+
+    logger.error("Database connection failed");
+
+    console.log(error);
+
+    process.exit(1);
+
+  }
+
+}
+
 module.exports = connectDB;

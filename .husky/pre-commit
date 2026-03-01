@@ -1,0 +1,19 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+ 
+echo "Running pre-commit checks"
+ 
+if git ls-files --error-unmatch .env >/dev/null 2>&1; then
+  echo "FAIL: .env file is tracked by Git. Remove it!"
+  exit 1
+fi
+ 
+echo "Checking code format..."
+npx prettier --check "**/day5-auto-ci/**/*.js" || { echo "ERROR: JS is not formatted."; exit 1; }
+ 
+if git ls-files | grep -E '\.log$' >/dev/null 2>&1; then
+  echo "Log files are tracked by git"
+  exit 1
+fi
+ 
+echo "All checks passed. Committing code..."
