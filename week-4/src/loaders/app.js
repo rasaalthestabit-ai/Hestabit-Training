@@ -1,3 +1,4 @@
+const security = require("../middlewares/security");
 const express = require("express");
 
 const config = require("../config");
@@ -15,6 +16,17 @@ async function startServer() {
 
 
   /*
+  2️⃣ Load Middlewares
+  */
+
+  app.use(express.json({limit:"10kb"}));
+
+  security(app);
+
+  logger.info("Middlewares loaded");
+
+
+  /*
   1️⃣ Root Test Route
   */
 
@@ -22,15 +34,6 @@ async function startServer() {
     console.log("ROOT ROUTE HIT");
     res.send("SERVER WORKING");
   });
-
-
-  /*
-  2️⃣ Load Middlewares
-  */
-
-  app.use(express.json());
-
-  logger.info("Middlewares loaded");
 
 
   /*
@@ -81,20 +84,23 @@ async function startServer() {
   8️⃣ Graceful Shutdown
   */
 
-  process.on("SIGINT", () => {
+  if (!process.listenerCount("SIGINT")) {
 
-    logger.info("Graceful shutdown initiated");
+    process.on("SIGINT", () => {
 
-    server.close(() => {
+      logger.info("Graceful shutdown initiated");
 
-      logger.info("Server closed");
+      server.close(() => {
 
-      process.exit(0);
+        logger.info("Server closed");
+
+        process.exit(0);
+
+      });
 
     });
 
-  });
-
+  }
 
   return app;
 

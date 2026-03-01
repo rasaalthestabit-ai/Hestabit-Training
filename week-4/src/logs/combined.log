@@ -185,3 +185,125 @@
 2026-02-26T08:10:36.161Z [INFO]: Server started on port 5000
 2026-02-26T08:13:05.102Z [INFO]: Graceful shutdown initiated
 2026-02-26T08:13:09.012Z [INFO]: Graceful shutdown initiated
+2026-03-01T17:23:52.242Z [INFO]: Middlewares loaded
+2026-03-01T17:23:52.276Z [INFO]: Database connected
+2026-03-01T17:23:52.276Z [INFO]: Routes mounted: Product endpoints
+2026-03-01T17:23:52.279Z [INFO]: Server started on port 5000
+2026-03-01T17:23:53.290Z [INFO]: Middlewares loaded
+2026-03-01T17:23:53.334Z [INFO]: Database connected
+2026-03-01T17:23:53.335Z [INFO]: Routes mounted: Product endpoints
+2026-03-01T17:23:53.338Z [INFO]: Server started on port 5000
+2026-03-01T17:23:56.241Z [INFO]: Middlewares loaded
+2026-03-01T17:23:56.285Z [INFO]: Database connected
+2026-03-01T17:23:56.285Z [INFO]: Routes mounted: Product endpoints
+2026-03-01T17:23:56.288Z [INFO]: Server started on port 5000
+2026-03-01T17:23:57.785Z [INFO]: Middlewares loaded
+2026-03-01T17:23:57.818Z [INFO]: Database connected
+2026-03-01T17:23:57.818Z [INFO]: Routes mounted: Product endpoints
+2026-03-01T17:23:57.821Z [INFO]: Server started on port 5000
+2026-03-01T17:25:05.651Z [INFO]: Graceful shutdown initiated
+2026-03-01T17:25:05.674Z [INFO]: Graceful shutdown initiated
+2026-03-01T17:25:05.696Z [INFO]: Graceful shutdown initiated
+2026-03-01T17:25:10.337Z [INFO]: Graceful shutdown initiated
+2026-03-01T17:27:04.912Z [INFO]: Middlewares loaded
+2026-03-01T17:27:04.963Z [INFO]: Database connected
+2026-03-01T17:27:04.964Z [INFO]: Routes mounted: Product endpoints
+2026-03-01T17:27:04.967Z [INFO]: Server started on port 5000
+2026-03-01T17:27:06.881Z [INFO]: Graceful shutdown initiated
+2026-03-01T17:28:54.084Z [INFO]: Server closed
+2026-03-01T17:29:08.020Z [INFO]: Middlewares loaded
+2026-03-01T17:29:08.054Z [INFO]: Database connected
+2026-03-01T17:29:08.055Z [INFO]: Routes mounted: Product endpoints
+2026-03-01T17:29:08.057Z [INFO]: Server started on port 5000
+2026-03-01T17:32:08.846Z [INFO]: Graceful shutdown initiated
+2026-03-01T17:32:11.808Z [INFO]: Middlewares loaded
+2026-03-01T17:32:11.852Z [INFO]: Database connected
+2026-03-01T17:32:11.852Z [INFO]: Routes mounted: Product endpoints
+2026-03-01T17:32:11.855Z [INFO]: Server started on port 5000
+2026-03-01T17:40:48.584Z [INFO]: Middlewares loaded
+2026-03-01T17:40:48.618Z [INFO]: Database connected
+2026-03-01T17:40:48.618Z [INFO]: Routes mounted: Product endpoints
+2026-03-01T17:40:48.621Z [INFO]: Server started on port 5000
+2026-03-01T17:40:52.267Z [INFO]: Middlewares loaded
+2026-03-01T17:40:52.315Z [INFO]: Database connected
+2026-03-01T17:40:52.316Z [INFO]: Routes mounted: Product endpoints
+2026-03-01T17:40:52.321Z [INFO]: Server started on port 5000
+2026-03-01T17:41:51.094Z [INFO]: Middlewares loaded
+2026-03-01T17:41:51.140Z [INFO]: Database connected
+2026-03-01T17:41:51.141Z [INFO]: Routes mounted: Product endpoints
+2026-03-01T17:41:51.150Z [INFO]: Server started on port 5000
+2026-03-01T17:46:59.279Z [INFO]: Middlewares loaded
+2026-03-01T17:46:59.314Z [INFO]: Database connected
+2026-03-01T17:46:59.314Z [INFO]: Routes mounted: Product endpoints
+2026-03-01T17:46:59.317Z [INFO]: Server started on port 5000
+2026-03-01T17:48:04.233Z [INFO]: Middlewares loaded
+2026-03-01T17:48:04.267Z [INFO]: Database connected
+2026-03-01T17:48:04.267Z [INFO]: Routes mounted: Product endpoints
+2026-03-01T17:48:04.270Z [INFO]: Server started on port 5000
+2026-03-01T17:48:17.545Z [INFO]: Middlewares loaded
+2026-03-01T17:48:17.584Z [INFO]: Database connected
+2026-03-01T17:48:17.585Z [INFO]: Routes mounted: Product endpoints
+2026-03-01T17:48:17.591Z [INFO]: Server started on port 5000
+2026-03-01T17:48:26.194Z [INFO]: Middlewares loaded
+2026-03-01T17:48:26.234Z [INFO]: Database connected
+2026-03-01T17:48:26.235Z [INFO]: Routes mounted: Product endpoints
+2026-03-01T17:48:26.242Z [INFO]: Server started on port 5000
+2026-03-01T17:48:29.600Z [INFO]: Middlewares loaded
+2026-03-01T17:48:29.650Z [INFO]: Database connected
+2026-03-01T17:48:29.651Z [INFO]: Routes mounted: Product endpoints
+2026-03-01T17:48:29.656Z [INFO]: Server started on port 5000
+2026-03-01T17:48:33.070Z [INFO]: Middlewares loaded
+2026-03-01T17:48:33.109Z [INFO]: Database connected
+2026-03-01T17:48:33.110Z [INFO]: Routes mounted: Product endpoints
+2026-03-01T17:48:33.116Z [INFO]: Server started on port 5000
+2026-03-01T17:51:04.879Z [INFO]: Middlewares loaded
+2026-03-01T17:51:04.918Z [INFO]: Database connected
+2026-03-01T17:51:04.920Z [INFO]: Routes mounted: Product endpoints
+2026-03-01T17:51:04.926Z [INFO]: Server started on port 5000
+2026-03-01T17:51:32.634Z [INFO]: Middlewares loaded
+2026-03-01T17:51:32.673Z [INFO]: Database connected
+2026-03-01T17:51:32.673Z [INFO]: Routes mounted: Product endpoints
+2026-03-01T17:51:32.678Z [INFO]: Server started on port 5000
+2026-03-01T17:52:26.888Z [INFO]: Graceful shutdown initiated
+2026-03-01T17:52:30.787Z [INFO]: Middlewares loaded
+2026-03-01T17:52:30.840Z [INFO]: Database connected
+2026-03-01T17:52:30.841Z [INFO]: Routes mounted: Product endpoints
+2026-03-01T17:52:30.845Z [INFO]: Server started on port 5000
+2026-03-01T17:53:56.682Z [INFO]: Middlewares loaded
+2026-03-01T17:53:56.727Z [INFO]: Database connected
+2026-03-01T17:53:56.727Z [INFO]: Routes mounted: Product endpoints
+2026-03-01T17:53:56.731Z [INFO]: Server started on port 5000
+2026-03-01T17:54:28.089Z [INFO]: Graceful shutdown initiated
+2026-03-01T17:54:31.839Z [INFO]: Middlewares loaded
+2026-03-01T17:54:31.878Z [INFO]: Database connected
+2026-03-01T17:54:31.878Z [INFO]: Routes mounted: Product endpoints
+2026-03-01T17:54:31.883Z [INFO]: Server started on port 5000
+2026-03-01T17:54:51.039Z [INFO]: Graceful shutdown initiated
+2026-03-01T17:56:36.762Z [INFO]: Middlewares loaded
+2026-03-01T17:56:36.798Z [INFO]: Database connected
+2026-03-01T17:56:36.798Z [INFO]: Routes mounted: Product endpoints
+2026-03-01T17:56:36.801Z [INFO]: Server started on port 5000
+2026-03-01T18:01:33.397Z [INFO]: Middlewares loaded
+2026-03-01T18:01:33.444Z [INFO]: Database connected
+2026-03-01T18:01:33.445Z [INFO]: Routes mounted: Product endpoints
+2026-03-01T18:01:33.450Z [INFO]: Server started on port 5000
+2026-03-01T18:07:17.463Z [INFO]: Graceful shutdown initiated
+2026-03-01T18:07:21.206Z [INFO]: Middlewares loaded
+2026-03-01T18:07:21.243Z [INFO]: Database connected
+2026-03-01T18:07:21.244Z [INFO]: Routes mounted: Product endpoints
+2026-03-01T18:07:21.246Z [INFO]: Server started on port 5000
+2026-03-01T18:07:23.010Z [INFO]: Graceful shutdown initiated
+2026-03-01T18:15:30.615Z [INFO]: Middlewares loaded
+2026-03-01T18:15:30.650Z [INFO]: Database connected
+2026-03-01T18:15:30.650Z [INFO]: Routes mounted: Product endpoints
+2026-03-01T18:15:30.653Z [INFO]: Server started on port 5000
+2026-03-01T18:16:37.439Z [INFO]: Graceful shutdown initiated
+2026-03-01T18:16:37.474Z [INFO]: Graceful shutdown initiated
+2026-03-01T18:16:37.494Z [INFO]: Graceful shutdown initiated
+2026-03-01T18:16:39.630Z [INFO]: Graceful shutdown initiated
+2026-03-01T18:16:42.107Z [INFO]: Server closed
+2026-03-01T18:18:21.720Z [INFO]: Middlewares loaded
+2026-03-01T18:18:21.755Z [INFO]: Database connected
+2026-03-01T18:18:21.755Z [INFO]: Routes mounted: Product endpoints
+2026-03-01T18:18:21.758Z [INFO]: Server started on port 5000
+2026-03-01T18:19:52.000Z [INFO]: Graceful shutdown initiated
