@@ -1,5 +1,5 @@
 const express = require("express");
-
+const { sendEmailJob } = require("../jobs/email.job");
 const router = express.Router();
 
 const ProductController = require("../controllers/product.controller");
@@ -26,6 +26,18 @@ router.delete("/:id", ProductController.deleteProduct);
 // Debug route
 router.get("/test",(req,res)=>{
   res.send("Products route working");
+});
+
+router.post("/email", async (req,res)=>{
+
+ await sendEmailJob({
+   email: req.body.email
+ });
+
+ res.json({
+   message:"Email Job Added"
+ });
+
 });
 
 module.exports = router;

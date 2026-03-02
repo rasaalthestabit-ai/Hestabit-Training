@@ -307,3 +307,20 @@
 2026-03-01T18:18:21.755Z [INFO]: Routes mounted: Product endpoints
 2026-03-01T18:18:21.758Z [INFO]: Server started on port 5000
 2026-03-01T18:19:52.000Z [INFO]: Graceful shutdown initiated
+2026-03-02T06:16:01.716Z [INFO]: Middlewares loaded
+2026-03-02T06:16:01.741Z [INFO]: Database connected
+2026-03-02T06:16:01.741Z [INFO]: Routes mounted: Product endpoints
+2026-03-02T06:16:01.743Z [INFO]: Server started on port 5000
+2026-03-02T06:17:49.205Z [INFO]: GET /products/email
+2026-03-02T06:18:50.048Z [INFO]: POST /products/email
+2026-03-02T06:18:50.061Z [INFO]: Processing email job for test@gmail.com
+2026-03-02T06:18:52.065Z [INFO]: Email sent to test@gmail.com
+2026-03-02T07:17:00.545Z [INFO]: POST /products
+2026-03-02T07:18:12.927Z [INFO]: GET /products
+2026-03-02T07:18:42.263Z [INFO]: DELETE /products/69a5396ce1313ec5fdf1b84e
+2026-03-02T07:19:36.861Z [INFO]: POST /products
+2026-03-02T07:19:52.378Z [INFO]: GET /products
+2026-03-02T07:20:23.015Z [INFO]: POST /products
+2026-03-02T07:20:40.568Z [INFO]: POST /products
+2026-03-02T07:21:04.793Z [INFO]: POST /products
+2026-03-02T07:32:30.003Z [INFO]: Graceful shutdown initiated

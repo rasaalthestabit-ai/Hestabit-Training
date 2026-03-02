@@ -1,0 +1,471 @@
+{
+  "info": {
+    "_postman_id": "b9398dd5-f51a-4eeb-af86-d32f86970168",
+    "name": "Product API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52130826",
+    "_collection_link": "https://go.postman.co/collection/52130826-b9398dd5-f51a-4eeb-af86-d32f86970168?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "New Request",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/products/69a5396ce1313ec5fdf1b84e",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "products",
+            "69a5396ce1313ec5fdf1b84e"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "New Request",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/products/69a5396ce1313ec5fdf1b84e",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "products",
+                "69a5396ce1313ec5fdf1b84e"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Request-ID",
+              "value": "cb97940b-5f4c-4ff4-a6fe-1d080f514908"
+            },
+            {
+              "key": "Content-Security-Policy",
+              "value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+            },
+            {
+              "key": "Cross-Origin-Opener-Policy",
+              "value": "same-origin"
+            },
+            {
+              "key": "Cross-Origin-Resource-Policy",
+              "value": "same-origin"
+            },
+            {
+              "key": "Origin-Agent-Cluster",
+              "value": "?1"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "no-referrer"
+            },
+            {
+              "key": "Strict-Transport-Security",
+              "value": "max-age=31536000; includeSubDomains"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "X-DNS-Prefetch-Control",
+              "value": "off"
+            },
+            {
+              "key": "X-Download-Options",
+              "value": "noopen"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "SAMEORIGIN"
+            },
+            {
+              "key": "X-Permitted-Cross-Domain-Policies",
+              "value": "none"
+            },
+            {
+              "key": "X-XSS-Protection",
+              "value": "0"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "X-RateLimit-Limit",
+              "value": "100"
+            },
+            {
+              "key": "X-RateLimit-Remaining",
+              "value": "98"
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 02 Mar 2026 07:18:42 GMT"
+            },
+            {
+              "key": "X-RateLimit-Reset",
+              "value": "1772435953"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "218"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"da-hHHZ9d7wppcDmWXmvwvslZMu128\""
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"_id\": \"69a5396ce1313ec5fdf1b84e\",\n    \"name\": \"iPhone 15\",\n    \"description\": \"\",\n    \"price\": 1200,\n    \"tags\": [],\n    \"deletedAt\": \"2026-03-02T07:18:42.272Z\",\n    \"createdAt\": \"2026-03-02T07:17:00.559Z\",\n    \"updatedAt\": \"2026-03-02T07:18:42.273Z\",\n    \"__v\": 0\n}"
+        }
+      ]
+    },
+    {
+      "name": "New Request",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"iPhone 15\",\n    \"price\": 1200,\n    \"category\": \"electronics\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/products",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "products"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "New Request",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"iPhone 15\",\n    \"price\": 1200,\n    \"category\": \"electronics\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5000/products",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "products"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Request-ID",
+              "value": "8ca2dfb6-64e3-42dd-886a-7b926c308e6f"
+            },
+            {
+              "key": "Content-Security-Policy",
+              "value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+            },
+            {
+              "key": "Cross-Origin-Opener-Policy",
+              "value": "same-origin"
+            },
+            {
+              "key": "Cross-Origin-Resource-Policy",
+              "value": "same-origin"
+            },
+            {
+              "key": "Origin-Agent-Cluster",
+              "value": "?1"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "no-referrer"
+            },
+            {
+              "key": "Strict-Transport-Security",
+              "value": "max-age=31536000; includeSubDomains"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "X-DNS-Prefetch-Control",
+              "value": "off"
+            },
+            {
+              "key": "X-Download-Options",
+              "value": "noopen"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "SAMEORIGIN"
+            },
+            {
+              "key": "X-Permitted-Cross-Domain-Policies",
+              "value": "none"
+            },
+            {
+              "key": "X-XSS-Protection",
+              "value": "0"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "X-RateLimit-Limit",
+              "value": "100"
+            },
+            {
+              "key": "X-RateLimit-Remaining",
+              "value": "98"
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 02 Mar 2026 07:19:52 GMT"
+            },
+            {
+              "key": "X-RateLimit-Reset",
+              "value": "1772436037"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "2211"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"8a3-QFXXbxocjdzmzYSfJcz8jrQpE9k\""
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"_id\": \"69a47fca6fe60dc4809ea82d\",\n        \"name\": \"&lt;script&gt;alert('hack')&lt;/script&gt;\",\n        \"description\": \"\",\n        \"price\": 500,\n        \"tags\": [],\n        \"deletedAt\": null,\n        \"createdAt\": \"2026-03-01T18:04:58.457Z\",\n        \"updatedAt\": \"2026-03-01T18:04:58.457Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"69a47f9d6fe60dc4809ea82b\",\n        \"name\": \"Laptop\",\n        \"description\": \"\",\n        \"price\": 1000,\n        \"tags\": [],\n        \"deletedAt\": null,\n        \"createdAt\": \"2026-03-01T18:04:13.023Z\",\n        \"updatedAt\": \"2026-03-01T18:04:13.023Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"69a47f0d6fe60dc4809ea829\",\n        \"name\": \"Laptop\",\n        \"description\": \"Gaming laptop\",\n        \"price\": 1200,\n        \"tags\": [\n            \"electronics\"\n        ],\n        \"deletedAt\": null,\n        \"createdAt\": \"2026-03-01T18:01:49.783Z\",\n        \"updatedAt\": \"2026-03-01T18:01:49.783Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"69a47a8f66007cc25d180e23\",\n        \"name\": \"<script>alert('hack')</script>\",\n        \"description\": \"\",\n        \"price\": 100,\n        \"tags\": [],\n        \"deletedAt\": null,\n        \"createdAt\": \"2026-03-01T17:42:39.661Z\",\n        \"updatedAt\": \"2026-03-01T17:42:39.661Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"69a47a7e66007cc25d180e21\",\n        \"name\": \"Security Test Product\",\n        \"description\": \"\",\n        \"price\": 300,\n        \"tags\": [],\n        \"deletedAt\": null,\n        \"createdAt\": \"2026-03-01T17:42:22.122Z\",\n        \"updatedAt\": \"2026-03-01T17:42:22.122Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"699ffed19b459caff401e28c\",\n        \"name\": \"Mouse\",\n        \"description\": \"Wireless mouse\",\n        \"price\": 700,\n        \"tags\": [\n            \"electronics\",\n            \"accessory\"\n        ],\n        \"deletedAt\": null,\n        \"createdAt\": \"2026-02-26T08:05:37.050Z\",\n        \"updatedAt\": \"2026-02-26T08:05:37.050Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"699ffec79b459caff401e28a\",\n        \"name\": \"Smart Watch\",\n        \"description\": \"Fitness smartwatch\",\n        \"price\": 12000,\n        \"tags\": [\n            \"wearable\",\n            \"fitness\"\n        ],\n        \"deletedAt\": null,\n        \"createdAt\": \"2026-02-26T08:05:27.795Z\",\n        \"updatedAt\": \"2026-02-26T08:05:27.795Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"699ffeba9b459caff401e288\",\n        \"name\": \"Headphones\",\n        \"description\": \"Wireless headphones\",\n        \"price\": 2500,\n        \"tags\": [\n            \"electronics\",\n            \"audio\"\n        ],\n        \"deletedAt\": null,\n        \"createdAt\": \"2026-02-26T08:05:14.363Z\",\n        \"updatedAt\": \"2026-02-26T08:05:14.363Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"699ffead9b459caff401e286\",\n        \"name\": \"USB Cable\",\n        \"description\": \"Fast charging cable\",\n        \"price\": 200,\n        \"tags\": [\n            \"electronics\",\n            \"accessory\"\n        ],\n        \"deletedAt\": null,\n        \"createdAt\": \"2026-02-26T08:05:01.172Z\",\n        \"updatedAt\": \"2026-02-26T08:05:01.172Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"699ffb179b459caff401e27b\",\n        \"name\": \"iPhone\",\n        \"description\": \"\",\n        \"price\": 90000,\n        \"tags\": [],\n        \"deletedAt\": null,\n        \"createdAt\": \"2026-02-26T07:49:43.605Z\",\n        \"updatedAt\": \"2026-02-26T07:49:43.605Z\",\n        \"__v\": 0\n    }\n]"
+        }
+      ]
+    },
+    {
+      "name": "New Request",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Test Product\",\n  \"price\": 1000,\n  \"category\": \"electronics\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/products",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "products"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "New Request",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Test Product\",\n  \"price\": 1000,\n  \"category\": \"electronics\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/products",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "products"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Request-ID",
+              "value": "152cfadf-82f6-4007-9154-dc763ea06884"
+            },
+            {
+              "key": "Content-Security-Policy",
+              "value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+            },
+            {
+              "key": "Cross-Origin-Opener-Policy",
+              "value": "same-origin"
+            },
+            {
+              "key": "Cross-Origin-Resource-Policy",
+              "value": "same-origin"
+            },
+            {
+              "key": "Origin-Agent-Cluster",
+              "value": "?1"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "no-referrer"
+            },
+            {
+              "key": "Strict-Transport-Security",
+              "value": "max-age=31536000; includeSubDomains"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "X-DNS-Prefetch-Control",
+              "value": "off"
+            },
+            {
+              "key": "X-Download-Options",
+              "value": "noopen"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "SAMEORIGIN"
+            },
+            {
+              "key": "X-Permitted-Cross-Domain-Policies",
+              "value": "none"
+            },
+            {
+              "key": "X-XSS-Protection",
+              "value": "0"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "X-RateLimit-Limit",
+              "value": "100"
+            },
+            {
+              "key": "X-RateLimit-Remaining",
+              "value": "98"
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 02 Mar 2026 07:21:04 GMT"
+            },
+            {
+              "key": "X-RateLimit-Reset",
+              "value": "1772436101"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "199"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"c7-hp8drdTCa8VfKfH++2Vgkevea5o\""
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"name\": \"Test Product\",\n    \"description\": \"\",\n    \"price\": 1000,\n    \"tags\": [],\n    \"deletedAt\": null,\n    \"_id\": \"69a53a60e1313ec5fdf1b857\",\n    \"createdAt\": \"2026-03-02T07:21:04.794Z\",\n    \"updatedAt\": \"2026-03-02T07:21:04.794Z\",\n    \"__v\": 0\n}"
+        }
+      ]
+    }
+  ]
+}
