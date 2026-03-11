@@ -61,7 +61,7 @@ X["Released_Year"] = X["Released_Year"].fillna(X["Released_Year"].median())
 
 print("Creating new features...")
 
-X["movie_age"] = 2024 - X["Released_Year"]
+X["movie_age"] = 2026 - X["Released_Year"]
 
 X["log_votes"] = np.log1p(X["No_of_Votes"])
 
