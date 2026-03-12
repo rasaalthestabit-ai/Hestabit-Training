@@ -1,0 +1,9 @@
+{
+    "best_model": "SVM",
+    "best_parameters": {
+        "C": 99.81805923774466,
+        "gamma": 0.03211422683285853,
+        "kernel": "rbf"
+    },
+    "best_f1_score": 0.7582407847421871
+}
