@@ -33,7 +33,7 @@ const customFormat = winston.format.printf(
     baseLog += `: ${message}`;
 
     /*
-    Attach metadata if present
+    Attaches metadata if present
     */
     if (Object.keys(meta).length > 0) {
       baseLog += ` | ${JSON.stringify(meta)}`;

@@ -19,10 +19,10 @@ print("Dataset shape:", df.shape)
 
 
 # ----------------------------
-# TARGET SPLIT
+# SEPARATE TARGET FOR ENGINEERING
 # ----------------------------
 
-y = df["IMDB_Rating"]
+rating = df["IMDB_Rating"]
 
 X = df.drop("IMDB_Rating", axis=1)
 
@@ -51,9 +51,9 @@ X["Gross"] = X["Gross"].fillna(X["Gross"].median())
 X["Meta_score"] = X["Meta_score"].fillna(X["Meta_score"].median())
 X["Runtime"] = X["Runtime"].fillna(X["Runtime"].median())
 
-
 X["Released_Year"] = pd.to_numeric(X["Released_Year"], errors="coerce")
 X["Released_Year"] = X["Released_Year"].fillna(X["Released_Year"].median())
+
 
 # ----------------------------
 # FEATURE ENGINEERING
@@ -71,9 +71,9 @@ X["votes_squared"] = X["No_of_Votes"] ** 2
 
 X["votes_per_year"] = X["No_of_Votes"] / (X["movie_age"] + 1)
 
-X["rating_votes_interaction"] = y * X["No_of_Votes"]
+X["rating_votes_interaction"] = rating * X["No_of_Votes"]
 
-X["meta_rating_interaction"] = X["Meta_score"] * y
+X["meta_rating_interaction"] = X["Meta_score"] * rating
 
 X["gross_per_vote"] = X["Gross"] / (X["No_of_Votes"] + 1)
 
@@ -83,17 +83,17 @@ X["log_runtime"] = np.log1p(X["Runtime"])
 
 
 # ----------------------------
-# TEXT FEATURE ENGINEERING
+# TEXT FEATURES (TF-IDF)
 # ----------------------------
 
 print("Creating TF-IDF features...")
 
 tfidf = TfidfVectorizer(max_features=100)
 
-overview_tfidf = tfidf.fit_transform(df["Overview"])
+overview_matrix = tfidf.fit_transform(df["Overview"])
 
 overview_df = pd.DataFrame(
-    overview_tfidf.toarray(),
+    overview_matrix.toarray(),
     columns=tfidf.get_feature_names_out()
 )
 
@@ -114,7 +114,7 @@ X.drop(columns=drop_cols, inplace=True)
 
 
 # ----------------------------
-# ENCODE CATEGORICAL FEATURES
+# ENCODE CATEGORICAL VARIABLES
 # ----------------------------
 
 print("Encoding categorical variables...")
@@ -133,10 +133,10 @@ X = pd.get_dummies(X, columns=categorical_cols, drop_first=True)
 
 
 # ----------------------------
-# NORMALIZE NUMERICAL FEATURES
+# SCALE NUMERIC FEATURES
 # ----------------------------
 
-print("Scaling numerical features...")
+print("Scaling numeric features...")
 
 scaler = StandardScaler()
 
@@ -146,17 +146,14 @@ X[numeric_cols] = scaler.fit_transform(X[numeric_cols])
 
 
 # ----------------------------
-# TRAIN TEST SPLIT
+# CREATE BALANCED CLASSIFICATION TARGET
 # ----------------------------
 
-print("Splitting dataset...")
+print("Creating classification target...")
 
-X_train, X_test, y_train, y_test = train_test_split(
-    X,
-    y,
-    test_size=0.2,
-    random_state=42
-)
+median_rating = rating.median()
+
+target = (rating >= median_rating).astype(int)
 
 
 # ----------------------------
@@ -165,18 +162,29 @@ X_train, X_test, y_train, y_test = train_test_split(
 
 print("Selecting important features...")
 
-selected_features, scores = mutual_information_selection(X_train, y_train, top_k=30)
+X_train, X_test, y_train, y_test = train_test_split(
+    X,
+    target,
+    test_size=0.2,
+    random_state=42
+)
+
+selected_features, scores = mutual_information_selection(
+    X_train,
+    y_train,
+    top_k=30
+)
 
 
 # ----------------------------
-# FEATURE IMPORTANCE PLOT
+# PLOT FEATURE IMPORTANCE
 # ----------------------------
 
 print("Plotting feature importance...")
 
 top_scores = scores.sort_values(ascending=False).head(20)
 
-plt.figure(figsize=(10, 6))
+plt.figure(figsize=(10,6))
 
 sns.barplot(x=top_scores.values, y=top_scores.index)
 
@@ -191,11 +199,21 @@ plt.show()
 # SAVE FEATURE LIST
 # ----------------------------
 
-print("Saving selected feature list...")
+print("Saving feature list...")
 
 with open("src/features/feature_list.json", "w") as f:
-
     json.dump(selected_features, f, indent=4)
+
+
+# ----------------------------
+# SAVE FINAL DATASET
+# ----------------------------
+
+print("Saving engineered dataset...")
+
+X["target"] = target
+
+X.to_csv("src/data/processed/features.csv", index=False)
 
 
 print("Feature engineering pipeline completed.")

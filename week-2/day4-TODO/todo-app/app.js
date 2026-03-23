@@ -1,5 +1,4 @@
 import { saveTodos, loadTodos } from "./storage/localStorage.js";
-import { debounce } from "./utils/debounce.js"
 
 const form = document.getElementById("todo-form");
 const input = document.getElementById("todo-input");

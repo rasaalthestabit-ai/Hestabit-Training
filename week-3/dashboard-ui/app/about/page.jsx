@@ -70,7 +70,7 @@ export default function About() {
 
         <ul className="space-y-2 text-gray-600 list-disc pl-5">
           <li>Backend integration with real database</li>
-          <li>Authentication using JWT or OAuth</li>
+          <li>Authentication</li>
           <li>Role-based access control</li>
           <li>Dark mode support</li>
           <li>Real-time online status tracking</li>

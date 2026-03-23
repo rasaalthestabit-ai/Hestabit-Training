@@ -145,7 +145,7 @@ export default function HomePage() {
         </div>
 
         <p className="text-center text-gray-500 mt-8">
-          © 2026 Purity UI. All rights reserved.
+          &copy; 2026 Purity UI. All rights reserved.
         </p>
       </footer>
 

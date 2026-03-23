@@ -7,6 +7,7 @@ const logger = require("../utils/logger");
 const connectDB = require("./db");
 const tracing = require("../utils/tracing");
 const productRoutes = require("../routes/product.routes");
+const indexRoutes = require("../routes");
 const errorMiddleware = require("../middlewares/error.middleware");
 
 
@@ -14,11 +15,7 @@ async function startServer() {
 
   const app = express();
 
-
-  /*
-  2️⃣ Load Middlewares
-  */
-
+  /* Middlewares */
   app.use(express.json({limit:"10kb"}));
   app.use(tracing);
   security(app);
@@ -26,19 +23,13 @@ async function startServer() {
   logger.info("Middlewares loaded");
 
 
-  /*
-  1️⃣ Root Test Route
-  */
+  /* Root test */
 
   app.get("/", (req, res) => {
     console.log("ROOT ROUTE HIT");
     res.send("SERVER WORKING");
   });
 
-
-  /*
-  3️⃣ Request Debugger
-  */
 
   app.use((req,res,next)=>{
     logger.info(
@@ -50,9 +41,7 @@ async function startServer() {
   });
 
 
-  /*
-  4️⃣ Connect Database
-  */
+  /* Database */
 
   await connectDB();
 
@@ -64,25 +53,13 @@ async function startServer() {
     next();
   });
 
-  /*
-  5️⃣ Mount Routes
-  */
+  /* Routes */
 
   app.use("/products", productRoutes);
-
+  app.use("/", indexRoutes);
   logger.info("Routes mounted: Product endpoints");
 
-
-  /*
-  6️⃣ Error Middleware
-  */
-
   app.use(errorMiddleware);
-
-
-  /*
-  7️⃣ Start Server
-  */
 
   const server = app.listen(config.port, () => {
 
@@ -90,10 +67,6 @@ async function startServer() {
 
   });
 
-
-  /*
-  8️⃣ Graceful Shutdown
-  */
 
   if (!process.listenerCount("SIGINT")) {
 

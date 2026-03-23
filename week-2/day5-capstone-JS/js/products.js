@@ -39,7 +39,7 @@ function renderProducts(products) {
 }
 
 
-// SEARCH
+// Search
 document.getElementById("searchInput")
   .addEventListener("input", (e) => {
 
@@ -53,7 +53,7 @@ document.getElementById("searchInput")
 });
 
 
-// SORT
+// Sort
 document.getElementById("sortPrice")
   .addEventListener("change", (e) => {
 

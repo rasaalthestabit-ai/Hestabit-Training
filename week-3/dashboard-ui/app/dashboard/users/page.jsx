@@ -65,10 +65,10 @@ export default function UsersPage() {
                   <td className="py-4">
                     <Badge
                       text={user.status}
-                      className={
+                      color={
                         user.status === "online"
-                          ? "bg-green-100 text-green-700"
-                          : "bg-gray-200 text-gray-600"
+                          ? "green"
+                          :"red"
                       }
                     />
                   </td>

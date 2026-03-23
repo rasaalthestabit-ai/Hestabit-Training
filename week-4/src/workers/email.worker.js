@@ -2,31 +2,22 @@ const { Worker } = require("bullmq");
 const logger = require("../utils/logger");
 
 const connection = {
- host: "127.0.0.1",
- port: 6379
+  host: "127.0.0.1",
+  port: 6379
 };
 
-
 const worker = new Worker(
+  "emailQueue",
+  async job => {
 
- "emailQueue",
+    logger.info(`Processing email job for ${job.data.email}`);
 
- async job => {
+    await new Promise(resolve => setTimeout(resolve, 2000));
 
-   logger.info(
-     `Processing email job for ${job.data.email}`
-   );
+    logger.info(`Email sent to ${job.data.email}`);
 
-   await new Promise(resolve =>
-     setTimeout(resolve,2000)
-   );
-
-   logger.info(
-     `Email sent to ${job.data.email}`
-   );
-
- },
-
- { connection }
-
+  },
+  { connection }
 );
+
+module.exports = worker;

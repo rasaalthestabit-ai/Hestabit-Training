@@ -324,3 +324,740 @@
 2026-03-02T07:20:40.568Z [INFO]: POST /products
 2026-03-02T07:21:04.793Z [INFO]: POST /products
 2026-03-02T07:32:30.003Z [INFO]: Graceful shutdown initiated
+2026-03-12T07:05:39.978Z [INFO]: Middlewares loaded
+2026-03-12T07:05:44.991Z [ERROR]: Database connection failed
+2026-03-12T07:10:37.500Z [INFO]: Middlewares loaded
+2026-03-12T07:10:37.526Z [INFO]: Database connected
+2026-03-12T07:10:37.526Z [INFO]: Routes mounted: Product endpoints
+2026-03-12T07:10:37.528Z [INFO]: Server started on port 5000
+2026-03-12T07:10:52.357Z [INFO]: GET /favicon.ico
+2026-03-12T07:10:52.357Z [INFO] [d0258698-a881-48f7-8efd-7fd52d834d25]: GET /favicon.ico
+2026-03-12T07:11:03.493Z [INFO]: GET /products
+2026-03-12T07:11:03.493Z [INFO] [fa862b3c-188b-4bd2-b250-e018051395d5]: GET /products
+2026-03-12T07:11:03.493Z [INFO] [fa862b3c-188b-4bd2-b250-e018051395d5]: Fetching products | {"query":{}}
+2026-03-12T07:11:03.507Z [INFO] [fa862b3c-188b-4bd2-b250-e018051395d5]: Products fetched successfully | {"count":10}
+2026-03-12T07:11:13.297Z [INFO]: GET /users
+2026-03-12T07:11:13.298Z [INFO] [2354dd5a-fbd5-4084-b925-2fc9f5a239c0]: GET /users
+2026-03-12T07:11:19.658Z [INFO]: GET /health
+2026-03-12T07:11:19.658Z [INFO] [ba5d1eeb-7f7f-4fb3-9d0f-7288777d8d40]: GET /health
+2026-03-12T07:11:23.861Z [INFO]: GET /products
+2026-03-12T07:11:23.861Z [INFO] [864d6355-15e2-41b9-8f9e-db8529a72cd3]: GET /products
+2026-03-12T07:11:23.862Z [INFO] [864d6355-15e2-41b9-8f9e-db8529a72cd3]: Fetching products | {"query":{}}
+2026-03-12T07:11:23.868Z [INFO] [864d6355-15e2-41b9-8f9e-db8529a72cd3]: Products fetched successfully | {"count":10}
+2026-03-12T07:11:40.782Z [INFO]: Graceful shutdown initiated
+2026-03-12T07:11:40.804Z [INFO]: Graceful shutdown initiated
+2026-03-12T07:11:40.826Z [INFO]: Graceful shutdown initiated
+2026-03-12T07:11:42.551Z [INFO]: Graceful shutdown initiated
+2026-03-12T07:22:25.102Z [INFO]: Server closed
+2026-03-12T07:25:35.175Z [INFO]: Middlewares loaded
+2026-03-12T07:25:35.200Z [INFO]: Database connected
+2026-03-12T07:25:35.200Z [INFO]: Routes mounted: Product endpoints
+2026-03-12T07:25:35.202Z [INFO]: Server started on port 5000
+2026-03-12T07:25:59.201Z [INFO]: GET /products/email
+2026-03-12T07:25:59.201Z [INFO] [0187550e-1b12-4ed2-b6b6-ab5d2abb1070]: GET /products/email
+2026-03-12T07:26:51.000Z [INFO]: GET /products
+2026-03-12T07:26:51.000Z [INFO] [54560e90-645c-489a-9eac-ab84b8b2919f]: GET /products
+2026-03-12T07:26:51.001Z [INFO] [54560e90-645c-489a-9eac-ab84b8b2919f]: Fetching products | {"query":{}}
+2026-03-12T07:26:51.016Z [INFO] [54560e90-645c-489a-9eac-ab84b8b2919f]: Products fetched successfully | {"count":10}
+2026-03-12T07:26:58.249Z [INFO]: Graceful shutdown initiated
+2026-03-12T07:28:29.781Z [INFO]: Middlewares loaded
+2026-03-12T07:28:29.816Z [INFO]: Database connected
+2026-03-12T07:28:29.817Z [INFO]: Routes mounted: Product endpoints
+2026-03-12T07:28:29.820Z [INFO]: Server started on port 5000
+2026-03-12T07:28:33.378Z [INFO]: GET /products
+2026-03-12T07:28:33.379Z [INFO] [34074c70-5b4b-4a74-9cbc-e8921ba3318b]: GET /products
+2026-03-12T07:28:33.379Z [INFO] [34074c70-5b4b-4a74-9cbc-e8921ba3318b]: Fetching products | {"query":{}}
+2026-03-12T07:28:33.389Z [INFO] [34074c70-5b4b-4a74-9cbc-e8921ba3318b]: Products fetched successfully | {"count":10}
+2026-03-12T07:28:51.549Z [INFO]: POST /products
+2026-03-12T07:28:51.549Z [INFO] [c5f815b1-290c-4782-9f3d-abeb7f04468a]: POST /products
+2026-03-12T07:28:51.552Z [INFO] [c5f815b1-290c-4782-9f3d-abeb7f04468a]: Creating product | {"body":{"name":"Test Product 2","price":1000,"tags":[]}}
+2026-03-12T07:28:51.561Z [INFO] [c5f815b1-290c-4782-9f3d-abeb7f04468a]: Product created successfully | {"productId":"69b26b335848bff44ea468a8"}
+2026-03-12T07:29:09.214Z [INFO]: DELETE /products/69b26b335848bff44ea468a8
+2026-03-12T07:29:09.214Z [INFO] [3bbc8841-03a3-4b07-bd2a-d73fc6eea85d]: DELETE /products/69b26b335848bff44ea468a8
+2026-03-12T07:29:09.215Z [INFO] [3bbc8841-03a3-4b07-bd2a-d73fc6eea85d]: Deleting product | {"productId":"69b26b335848bff44ea468a8"}
+2026-03-12T07:29:09.225Z [INFO] [3bbc8841-03a3-4b07-bd2a-d73fc6eea85d]: Product deleted
+2026-03-12T07:29:45.700Z [INFO]: Graceful shutdown initiated
+2026-03-12T07:31:21.142Z [INFO]: Middlewares loaded
+2026-03-12T07:31:21.169Z [INFO]: Database connected
+2026-03-12T07:31:21.170Z [INFO]: Routes mounted: Product endpoints
+2026-03-12T07:31:21.171Z [INFO]: Server started on port 5000
+2026-03-12T07:33:13.409Z [INFO]: GET /users
+2026-03-12T07:33:13.410Z [INFO] [4b8cead5-625a-43b0-b66e-f89f35ca5042]: GET /users
+2026-03-12T07:33:19.333Z [INFO]: GET /email
+2026-03-12T07:33:19.334Z [INFO] [24a1ad5d-6d95-48c8-9400-627dcca09941]: GET /email
+2026-03-12T07:33:32.900Z [INFO]: Graceful shutdown initiated
+2026-03-12T07:41:41.212Z [INFO]: Middlewares loaded
+2026-03-12T07:41:41.237Z [INFO]: Database connected
+2026-03-12T07:41:41.238Z [INFO]: Routes mounted: Product endpoints
+2026-03-12T07:41:41.239Z [INFO]: Server started on port 5000
+2026-03-12T07:41:55.655Z [INFO]: GET /health
+2026-03-12T07:41:55.656Z [INFO] [e11a52ef-ff2b-4f27-9e13-eca7397fa565]: GET /health
+2026-03-12T07:42:04.480Z [INFO]: GET /api/health
+2026-03-12T07:42:04.480Z [INFO] [93190882-69da-4238-a88f-3b6d4c0f4ee4]: GET /api/health
+2026-03-12T07:42:11.014Z [INFO]: GET /products
+2026-03-12T07:42:11.015Z [INFO] [b31d84b6-f85b-43f4-81c6-3c5d5fc4df81]: GET /products
+2026-03-12T07:42:11.016Z [INFO] [b31d84b6-f85b-43f4-81c6-3c5d5fc4df81]: Fetching products | {"query":{}}
+2026-03-12T07:42:11.034Z [INFO] [b31d84b6-f85b-43f4-81c6-3c5d5fc4df81]: Products fetched successfully | {"count":10}
+2026-03-12T07:42:18.170Z [INFO]: GET /products/health
+2026-03-12T07:42:18.171Z [INFO] [abdb1723-ac2e-4577-8c77-430df6b8f6da]: GET /products/health
+2026-03-12T07:42:23.680Z [INFO]: GET /products/users
+2026-03-12T07:42:23.680Z [INFO] [b5c729e3-7286-4a9b-a6a8-a5374f25bc30]: GET /products/users
+2026-03-12T07:42:26.865Z [INFO]: GET /products/user
+2026-03-12T07:42:26.865Z [INFO] [d430413c-8e07-4fac-a18f-4d47dce2137d]: GET /products/user
+2026-03-12T07:42:29.974Z [INFO]: GET /products
+2026-03-12T07:42:29.975Z [INFO] [c08744f6-cc06-46bf-9c7c-da9098aa5a81]: GET /products
+2026-03-12T07:42:29.975Z [INFO] [c08744f6-cc06-46bf-9c7c-da9098aa5a81]: Fetching products | {"query":{}}
+2026-03-12T07:42:29.983Z [INFO] [c08744f6-cc06-46bf-9c7c-da9098aa5a81]: Products fetched successfully | {"count":10}
+2026-03-12T07:42:48.091Z [INFO]: Graceful shutdown initiated
+2026-03-12T07:42:48.114Z [INFO]: Graceful shutdown initiated
+2026-03-12T07:42:48.136Z [INFO]: Graceful shutdown initiated
+2026-03-12T07:42:49.588Z [INFO]: Graceful shutdown initiated
+2026-03-12T07:45:00.784Z [INFO]: Server closed
+2026-03-13T09:43:00.141Z [INFO]: Middlewares loaded
+2026-03-13T09:43:00.189Z [INFO]: Database connected
+2026-03-13T09:43:00.190Z [INFO]: Routes mounted: Product endpoints
+2026-03-13T09:43:00.193Z [INFO]: Server started on port 5000
+2026-03-13T09:43:04.097Z [INFO]: GET /products
+2026-03-13T09:43:04.097Z [INFO] [854fbdc7-02a8-458c-bf83-696b483cb392]: GET /products
+2026-03-13T09:43:04.098Z [INFO] [854fbdc7-02a8-458c-bf83-696b483cb392]: Fetching products | {"query":{}}
+2026-03-13T09:43:04.126Z [INFO] [854fbdc7-02a8-458c-bf83-696b483cb392]: Products fetched successfully | {"count":10}
+2026-03-13T09:45:15.169Z [INFO]: Graceful shutdown initiated
+2026-03-15T16:15:41.422Z [INFO]: Middlewares loaded
+2026-03-15T16:15:41.470Z [INFO]: Database connected
+2026-03-15T16:15:41.471Z [INFO]: Routes mounted: Product endpoints
+2026-03-15T16:15:41.474Z [INFO]: Server started on port 5000
+2026-03-15T16:22:03.091Z [INFO]: Graceful shutdown initiated
+2026-03-15T16:24:00.966Z [INFO]: Middlewares loaded
+2026-03-15T16:24:01.011Z [INFO]: Database connected
+2026-03-15T16:24:01.011Z [INFO]: Routes mounted: Product endpoints
+2026-03-15T16:24:01.014Z [INFO]: Server started on port 5000
+2026-03-15T16:25:57.456Z [INFO]: Graceful shutdown initiated
+2026-03-15T16:29:12.998Z [INFO]: Middlewares loaded
+2026-03-15T16:29:13.042Z [INFO]: Database connected
+2026-03-15T16:29:13.042Z [INFO]: Routes mounted: Product endpoints
+2026-03-15T16:29:13.045Z [INFO]: Server started on port 5000
+2026-03-15T16:31:41.441Z [INFO]: Graceful shutdown initiated
+2026-03-15T16:35:09.399Z [INFO]: Middlewares loaded
+2026-03-15T16:35:09.443Z [INFO]: Database connected
+2026-03-15T16:35:09.444Z [INFO]: Routes mounted: Product endpoints
+2026-03-15T16:35:09.447Z [INFO]: Server started on port 5000
+2026-03-15T16:37:13.352Z [INFO]: Graceful shutdown initiated
+2026-03-15T16:37:15.470Z [INFO]: Graceful shutdown initiated
+2026-03-15T16:37:16.059Z [INFO]: Graceful shutdown initiated
+2026-03-15T16:37:16.446Z [INFO]: Graceful shutdown initiated
+2026-03-15T16:37:16.773Z [INFO]: Graceful shutdown initiated
+2026-03-15T16:37:17.084Z [INFO]: Graceful shutdown initiated
+2026-03-15T16:37:17.352Z [INFO]: Graceful shutdown initiated
+2026-03-15T16:37:17.573Z [INFO]: Graceful shutdown initiated
+2026-03-15T16:37:17.745Z [INFO]: Graceful shutdown initiated
+2026-03-15T16:37:19.074Z [INFO]: Graceful shutdown initiated
+2026-03-15T16:37:25.259Z [INFO]: Graceful shutdown initiated
+2026-03-15T16:37:33.334Z [INFO]: Graceful shutdown initiated
+2026-03-15T16:37:34.204Z [INFO]: Graceful shutdown initiated
+2026-03-15T16:38:09.563Z [INFO]: Graceful shutdown initiated
+2026-03-15T16:38:30.412Z [INFO]: Server closed
+2026-03-15T16:38:40.220Z [INFO]: Middlewares loaded
+2026-03-15T16:38:40.264Z [INFO]: Database connected
+2026-03-15T16:38:40.265Z [INFO]: Routes mounted: Product endpoints
+2026-03-15T16:38:40.268Z [INFO]: Server started on port 5000
+2026-03-15T16:39:04.106Z [INFO]: GET /products
+2026-03-15T16:39:04.107Z [INFO] [c5db6ad8-153f-4a96-af08-082e34280f64]: GET /products
+2026-03-15T16:39:04.108Z [INFO] [c5db6ad8-153f-4a96-af08-082e34280f64]: Fetching products | {"query":{}}
+2026-03-15T16:39:04.144Z [INFO] [c5db6ad8-153f-4a96-af08-082e34280f64]: Products fetched successfully | {"count":10}
+2026-03-15T16:39:23.612Z [INFO]: GET /health
+2026-03-15T16:39:23.613Z [INFO] [f6c80942-a164-401a-9421-6563d44c9c94]: GET /health
+2026-03-15T16:39:46.796Z [INFO]: GET /products
+2026-03-15T16:39:46.797Z [INFO] [d1d99d6a-8870-402c-82f7-ccb0c1ac6e92]: GET /products
+2026-03-15T16:39:46.797Z [INFO] [d1d99d6a-8870-402c-82f7-ccb0c1ac6e92]: Fetching products | {"query":{}}
+2026-03-15T16:39:46.806Z [INFO] [d1d99d6a-8870-402c-82f7-ccb0c1ac6e92]: Products fetched successfully | {"count":10}
+2026-03-15T16:40:08.320Z [INFO]: GET /products
+2026-03-15T16:40:08.321Z [INFO] [1f1e0d77-0cc3-47ef-bdbe-c541d5527675]: GET /products
+2026-03-15T16:40:08.321Z [INFO] [1f1e0d77-0cc3-47ef-bdbe-c541d5527675]: Fetching products | {"query":{}}
+2026-03-15T16:40:08.331Z [INFO] [1f1e0d77-0cc3-47ef-bdbe-c541d5527675]: Products fetched successfully | {"count":10}
+2026-03-15T16:40:53.116Z [INFO]: Graceful shutdown initiated
+2026-03-15T16:40:53.142Z [INFO]: Graceful shutdown initiated
+2026-03-15T16:40:53.173Z [INFO]: Graceful shutdown initiated
+2026-03-15T16:40:54.653Z [INFO]: Graceful shutdown initiated
+2026-03-15T16:41:43.411Z [INFO]: Server closed
+2026-03-15T16:44:59.969Z [INFO]: Middlewares loaded
+2026-03-15T16:45:00.031Z [INFO]: Database connected
+2026-03-15T16:45:00.032Z [INFO]: Routes mounted: Product endpoints
+2026-03-15T16:45:00.034Z [INFO]: Server started on port 5000
+2026-03-15T16:46:20.450Z [INFO]: GET /email
+2026-03-15T16:46:20.451Z [INFO] [8bfd6dd8-9d88-425e-a6af-4ff875c8a734]: GET /email
+2026-03-15T16:46:24.497Z [INFO]: GET /emails
+2026-03-15T16:46:24.498Z [INFO] [6ccefca0-38e7-48d9-82e3-f1103041d33b]: GET /emails
+2026-03-15T16:51:14.568Z [INFO]: POST /products/email
+2026-03-15T16:51:14.568Z [INFO] [56a0d28b-db0f-4d77-a9ad-f0f310bccbe2]: POST /products/email
+2026-03-15T16:51:14.584Z [INFO]: Processing email job for test@gmail.com
+2026-03-15T16:51:16.590Z [INFO]: Email sent to test@gmail.com
+2026-03-15T16:52:53.831Z [INFO]: POST /products/email
+2026-03-15T16:52:53.831Z [INFO] [1c215b69-237d-4964-b368-5eb0742a5509]: POST /products/email
+2026-03-15T16:52:53.833Z [ERROR] [1c215b69-237d-4964-b368-5eb0742a5509]: Cannot read properties of undefined (reading 'email') | {"stack":"TypeError: Cannot read properties of undefined (reading 'email')\n    at /home/rasaaltewari/training/week-4/src/routes/product.routes.js:34:20\n    at Layer.handleRequest (/home/rasaaltewari/training/week-4/node_modules/router/lib/layer.js:152:17)\n    at next (/home/rasaaltewari/training/week-4/node_modules/router/lib/route.js:157:13)\n    at Route.dispatch (/home/rasaaltewari/training/week-4/node_modules/router/lib/route.js:117:3)\n    at handle (/home/rasaaltewari/training/week-4/node_modules/router/index.js:435:11)\n    at Layer.handleRequest (/home/rasaaltewari/training/week-4/node_modules/router/lib/layer.js:152:17)\n    at /home/rasaaltewari/training/week-4/node_modules/router/index.js:295:15\n    at processParams (/home/rasaaltewari/training/week-4/node_modules/router/index.js:582:12)\n    at next (/home/rasaaltewari/training/week-4/node_modules/router/index.js:291:5)\n    at router.handle (/home/rasaaltewari/training/week-4/node_modules/router/index.js:186:3)","path":"/products/email","method":"POST"}
+2026-03-15T16:53:24.440Z [INFO]: POST /products/email
+2026-03-15T16:53:24.440Z [INFO] [3c769eae-0a4c-4feb-92e4-c2abfa7aa646]: POST /products/email
+2026-03-15T16:53:24.444Z [INFO]: Processing email job for test@gmail.com
+2026-03-15T16:53:26.447Z [INFO]: Email sent to test@gmail.com
+2026-03-15T16:53:43.813Z [INFO]: POST /products/email
+2026-03-15T16:53:43.813Z [INFO] [c96fff82-07af-4cba-adb3-56d6638e2a6d]: POST /products/email
+2026-03-15T16:53:43.817Z [INFO]: Processing email job for test@gmail.com
+2026-03-15T16:53:45.820Z [INFO]: Email sent to test@gmail.com
+2026-03-15T16:59:35.563Z [INFO]: GET /docs
+2026-03-15T16:59:35.564Z [INFO] [214b4a1e-1810-4fb7-97f1-698441a903f2]: GET /docs
+2026-03-15T17:03:33.214Z [INFO]: POST /users
+2026-03-15T17:03:33.214Z [INFO] [6800230c-eee4-453d-8994-100db66e368d]: POST /users
+2026-03-15T17:03:40.515Z [INFO]: POST /products/users
+2026-03-15T17:03:40.516Z [INFO] [2751e399-77ee-4b0d-b498-ec647023883b]: POST /products/users
+2026-03-15T17:03:43.895Z [INFO]: POST /products/user
+2026-03-15T17:03:43.895Z [INFO] [58537ee6-2781-4e2d-991c-b67fd23aae03]: POST /products/user
+2026-03-15T17:03:45.852Z [INFO]: POST /products/users
+2026-03-15T17:03:45.852Z [INFO] [72e21ad0-de92-43ef-a917-22b42df7ddff]: POST /products/users
+2026-03-15T17:03:52.674Z [INFO]: POST /users
+2026-03-15T17:03:52.675Z [INFO] [9bc6b1fb-fefd-4dcc-9030-51ebc6a45543]: POST /users
+2026-03-15T17:03:53.839Z [INFO]: POST /user
+2026-03-15T17:03:53.839Z [INFO] [4b96d308-d1f2-44fe-b80f-98ca9fac7b62]: POST /user
+2026-03-15T17:05:25.389Z [INFO]: GET /health
+2026-03-15T17:05:25.390Z [INFO] [aa114938-43aa-48fa-880a-e989c02fc6fe]: GET /health
+2026-03-15T17:09:12.283Z [INFO]: Middlewares loaded
+2026-03-15T17:09:12.330Z [INFO]: Database connected
+2026-03-15T17:09:12.330Z [INFO]: Routes mounted: Product endpoints
+2026-03-15T17:09:12.333Z [INFO]: Server started on port 5000
+2026-03-15T17:09:25.605Z [INFO]: Middlewares loaded
+2026-03-15T17:09:25.654Z [INFO]: Database connected
+2026-03-15T17:09:25.654Z [INFO]: Routes mounted: Product endpoints
+2026-03-15T17:09:25.657Z [INFO]: Server started on port 5000
+2026-03-15T17:09:58.047Z [INFO]: Middlewares loaded
+2026-03-15T17:09:58.126Z [INFO]: Database connected
+2026-03-15T17:09:58.127Z [INFO]: Routes mounted: Product endpoints
+2026-03-15T17:09:58.133Z [INFO]: Server started on port 5000
+2026-03-15T17:09:59.314Z [INFO]: Middlewares loaded
+2026-03-15T17:09:59.361Z [INFO]: Database connected
+2026-03-15T17:09:59.362Z [INFO]: Routes mounted: Product endpoints
+2026-03-15T17:09:59.364Z [INFO]: Server started on port 5000
+2026-03-15T17:10:02.653Z [INFO]: Middlewares loaded
+2026-03-15T17:10:02.702Z [INFO]: Database connected
+2026-03-15T17:10:02.702Z [INFO]: Routes mounted: Product endpoints
+2026-03-15T17:10:02.706Z [INFO]: Server started on port 5000
+2026-03-15T17:10:08.282Z [INFO]: Middlewares loaded
+2026-03-15T17:10:08.326Z [INFO]: Database connected
+2026-03-15T17:10:08.327Z [INFO]: Routes mounted: Product endpoints
+2026-03-15T17:10:08.330Z [INFO]: Server started on port 5000
+2026-03-15T17:10:15.539Z [INFO]: GET /health
+2026-03-15T17:10:15.539Z [INFO] [c5864813-1af6-40c3-a4ae-691153a9bc29]: GET /health
+2026-03-15T17:10:35.957Z [INFO]: GET /health
+2026-03-15T17:10:35.957Z [INFO] [89f2a651-79da-498e-9119-f4ce5981b760]: GET /health
+2026-03-15T19:47:17.261Z [INFO]: Graceful shutdown initiated
+2026-03-16T07:17:09.864Z [INFO]: Middlewares loaded
+2026-03-16T07:17:09.909Z [INFO]: Database connected
+2026-03-16T07:17:09.909Z [INFO]: Routes mounted: Product endpoints
+2026-03-16T07:17:09.912Z [INFO]: Server started on port 5000
+2026-03-16T07:17:18.852Z [INFO]: GET /favicon.ico
+2026-03-16T07:17:18.853Z [INFO] [66bbf3e4-ae14-4014-8f18-76a35cd76aa3]: GET /favicon.ico
+2026-03-16T07:17:26.495Z [INFO]: GET /users
+2026-03-16T07:17:26.496Z [INFO] [90c4f161-e3c5-4b65-a16b-da5f65fc3b8c]: GET /users
+2026-03-16T07:17:38.494Z [INFO]: GET /products
+2026-03-16T07:17:38.495Z [INFO] [2f87c9e1-a213-4c43-b224-d22ca93606e7]: GET /products
+2026-03-16T07:17:38.496Z [INFO] [2f87c9e1-a213-4c43-b224-d22ca93606e7]: Fetching products | {"query":{}}
+2026-03-16T07:17:38.535Z [INFO] [2f87c9e1-a213-4c43-b224-d22ca93606e7]: Products fetched successfully | {"count":10}
+2026-03-16T07:17:40.815Z [INFO]: GET /products/users
+2026-03-16T07:17:40.815Z [INFO] [ea8e6740-7841-4247-a953-b2a1dedd41f9]: GET /products/users
+2026-03-16T07:17:47.365Z [INFO]: GET /products/email
+2026-03-16T07:17:47.366Z [INFO] [d8cf48e4-35a6-4c7b-bd44-786dc34ae325]: GET /products/email
+2026-03-16T07:17:50.966Z [INFO]: GET /products/emails
+2026-03-16T07:17:50.967Z [INFO] [1bbed22c-7da7-492c-a451-124005d94732]: GET /products/emails
+2026-03-16T07:18:00.430Z [INFO]: GET /products/
+2026-03-16T07:18:00.430Z [INFO] [aef78544-5a00-4c22-9e0d-96f925de486d]: GET /products/
+2026-03-16T07:18:00.430Z [INFO] [aef78544-5a00-4c22-9e0d-96f925de486d]: Fetching products | {"query":{}}
+2026-03-16T07:18:00.438Z [INFO] [aef78544-5a00-4c22-9e0d-96f925de486d]: Products fetched successfully | {"count":10}
+2026-03-16T07:30:52.058Z [INFO]: DELETE /products/69a47a8f66007cc25d180e23
+2026-03-16T07:30:52.059Z [INFO] [3525f859-fd86-4a7d-89de-f8bd9c59f33a]: DELETE /products/69a47a8f66007cc25d180e23
+2026-03-16T07:30:52.059Z [INFO] [3525f859-fd86-4a7d-89de-f8bd9c59f33a]: Deleting product | {"productId":"69a47a8f66007cc25d180e23"}
+2026-03-16T07:30:52.092Z [INFO] [3525f859-fd86-4a7d-89de-f8bd9c59f33a]: Product deleted
+2026-03-16T07:31:14.005Z [INFO]: GET /products
+2026-03-16T07:31:14.005Z [INFO] [0b4a1edb-3cfa-4bf4-b38c-1305d06980df]: GET /products
+2026-03-16T07:31:14.005Z [INFO] [0b4a1edb-3cfa-4bf4-b38c-1305d06980df]: Fetching products | {"query":{}}
+2026-03-16T07:31:14.010Z [INFO] [0b4a1edb-3cfa-4bf4-b38c-1305d06980df]: Products fetched successfully | {"count":10}
+2026-03-16T07:31:34.182Z [INFO]: DELETE /products/69a47fca6fe60dc4809ea82d
+2026-03-16T07:31:34.182Z [INFO] [f36ade29-9b39-46f7-86bb-8a870b13f7a6]: DELETE /products/69a47fca6fe60dc4809ea82d
+2026-03-16T07:31:34.183Z [INFO] [f36ade29-9b39-46f7-86bb-8a870b13f7a6]: Deleting product | {"productId":"69a47fca6fe60dc4809ea82d"}
+2026-03-16T07:31:34.188Z [INFO] [f36ade29-9b39-46f7-86bb-8a870b13f7a6]: Product deleted
+2026-03-16T07:31:42.102Z [INFO]: GET /products
+2026-03-16T07:31:42.102Z [INFO] [149e25a5-eabc-4da9-a8ac-066ee3489bbc]: GET /products
+2026-03-16T07:31:42.102Z [INFO] [149e25a5-eabc-4da9-a8ac-066ee3489bbc]: Fetching products | {"query":{}}
+2026-03-16T07:31:42.106Z [INFO] [149e25a5-eabc-4da9-a8ac-066ee3489bbc]: Products fetched successfully | {"count":9}
+2026-03-16T07:33:28.593Z [INFO]: GET /products?minPrice=100&maxPrice=5000
+2026-03-16T07:33:28.593Z [INFO] [947bb125-9a88-4595-8ceb-21635356879c]: GET /products?minPrice=100&maxPrice=5000
+2026-03-16T07:33:28.594Z [INFO] [947bb125-9a88-4595-8ceb-21635356879c]: Fetching products | {"query":{"minPrice":"100","maxPrice":"5000"}}
+2026-03-16T07:33:28.598Z [INFO] [947bb125-9a88-4595-8ceb-21635356879c]: Products fetched successfully | {"count":7}
+2026-03-16T07:33:40.228Z [INFO]: GET /products?minPrice=100&maxPrice=500
+2026-03-16T07:33:40.228Z [INFO] [1b4c8413-6703-480e-8578-55297ba35f56]: GET /products?minPrice=100&maxPrice=500
+2026-03-16T07:33:40.229Z [INFO] [1b4c8413-6703-480e-8578-55297ba35f56]: Fetching products | {"query":{"minPrice":"100","maxPrice":"500"}}
+2026-03-16T07:33:40.232Z [INFO] [1b4c8413-6703-480e-8578-55297ba35f56]: Products fetched successfully | {"count":2}
+2026-03-16T07:34:28.870Z [INFO]: GET /products?minPrice=100&maxPrice=500
+2026-03-16T07:34:28.870Z [INFO] [68c31abe-fbed-4a6a-b029-b74396919508]: GET /products?minPrice=100&maxPrice=500
+2026-03-16T07:34:28.870Z [INFO] [68c31abe-fbed-4a6a-b029-b74396919508]: Fetching products | {"query":{"minPrice":"100","maxPrice":"500"}}
+2026-03-16T07:34:28.875Z [INFO] [68c31abe-fbed-4a6a-b029-b74396919508]: Products fetched successfully | {"count":2}
+2026-03-16T07:44:11.458Z [INFO]: POST /products/email
+2026-03-16T07:44:11.458Z [INFO] [f02f95ff-bc48-43c8-be7b-c9418af66549]: POST /products/email
+2026-03-16T07:44:11.469Z [INFO]: Processing email job for test@gmail.com
+2026-03-16T07:44:13.474Z [INFO]: Email sent to test@gmail.com
+2026-03-16T07:45:34.634Z [INFO]: Graceful shutdown initiated
+2026-03-16T08:04:35.065Z [INFO]: Middlewares loaded
+2026-03-16T08:04:35.114Z [INFO]: Database connected
+2026-03-16T08:04:35.114Z [INFO]: Routes mounted: Product endpoints
+2026-03-16T08:04:35.117Z [INFO]: Server started on port 5000
+2026-03-16T08:06:31.993Z [INFO]: GET /products/users/paginated/limit=5
+2026-03-16T08:06:31.993Z [INFO] [3a37b9e8-3eb2-407b-b0d0-8c7fac066d4e]: GET /products/users/paginated/limit=5
+2026-03-16T08:09:07.199Z [INFO]: GET /accounts/paginated?limit=10
+2026-03-16T08:09:07.199Z [INFO] [08e4af4c-8a15-4ebd-bed2-d2be97068721]: GET /accounts/paginated?limit=10
+2026-03-16T08:09:51.782Z [INFO]: GET /account/paginated?limit=10
+2026-03-16T08:09:51.783Z [INFO] [0c1bf627-694b-4927-84a2-443355fd0af4]: GET /account/paginated?limit=10
+2026-03-16T08:10:03.284Z [INFO]: GET /order/paginated?limit=10
+2026-03-16T08:10:03.285Z [INFO] [305c39e0-3b82-45be-9c4c-d22a0dc29e81]: GET /order/paginated?limit=10
+2026-03-16T08:10:08.560Z [INFO]: GET /orders/paginated?limit=10
+2026-03-16T08:10:08.561Z [INFO] [5222eb90-149e-4229-a008-bd9a9c9bd0c9]: GET /orders/paginated?limit=10
+2026-03-16T08:10:18.740Z [INFO]: GET /users/paginated?limit=10
+2026-03-16T08:10:18.740Z [INFO] [a45433c8-69a3-4de0-8a29-e8b7450923d9]: GET /users/paginated?limit=10
+2026-03-16T08:15:42.610Z [INFO]: GET /products?page=1&limit=5
+2026-03-16T08:15:42.610Z [INFO] [44102ce2-70c0-4244-a440-8faf96ef14af]: GET /products?page=1&limit=5
+2026-03-16T08:15:42.611Z [INFO] [44102ce2-70c0-4244-a440-8faf96ef14af]: Fetching products | {"query":{"page":"1","limit":"5"}}
+2026-03-16T08:15:42.630Z [INFO] [44102ce2-70c0-4244-a440-8faf96ef14af]: Products fetched successfully | {"count":5}
+2026-03-16T08:16:34.774Z [INFO]: GET /products?page=1&limit=7
+2026-03-16T08:16:34.774Z [INFO] [2a148c46-144a-4535-aa1d-8c852e42b7a5]: GET /products?page=1&limit=7
+2026-03-16T08:16:34.774Z [INFO] [2a148c46-144a-4535-aa1d-8c852e42b7a5]: Fetching products | {"query":{"page":"1","limit":"7"}}
+2026-03-16T08:16:34.780Z [INFO] [2a148c46-144a-4535-aa1d-8c852e42b7a5]: Products fetched successfully | {"count":7}
+2026-03-16T08:16:43.127Z [INFO]: GET /products?page=1&limit=10
+2026-03-16T08:16:43.127Z [INFO] [629e754b-db47-48f3-acb2-f710460151aa]: GET /products?page=1&limit=10
+2026-03-16T08:16:43.127Z [INFO] [629e754b-db47-48f3-acb2-f710460151aa]: Fetching products | {"query":{"page":"1","limit":"10"}}
+2026-03-16T08:16:43.132Z [INFO] [629e754b-db47-48f3-acb2-f710460151aa]: Products fetched successfully | {"count":9}
+2026-03-16T08:16:58.078Z [INFO]: GET /products?page=1&limit=4
+2026-03-16T08:16:58.078Z [INFO] [843af79b-c821-457d-8074-c6012836a7dc]: GET /products?page=1&limit=4
+2026-03-16T08:16:58.078Z [INFO] [843af79b-c821-457d-8074-c6012836a7dc]: Fetching products | {"query":{"page":"1","limit":"4"}}
+2026-03-16T08:16:58.082Z [INFO] [843af79b-c821-457d-8074-c6012836a7dc]: Products fetched successfully | {"count":4}
+2026-03-16T08:18:10.566Z [INFO]: Graceful shutdown initiated
+2026-03-16T10:58:48.819Z [INFO]: Middlewares loaded
+2026-03-16T10:58:48.842Z [INFO]: Database connected
+2026-03-16T10:58:48.843Z [INFO]: Routes mounted: Product endpoints
+2026-03-16T10:58:48.844Z [INFO]: Server started on port 5000
+2026-03-16T10:58:56.747Z [INFO]: GET /orders
+2026-03-16T10:58:56.747Z [INFO] [0b153517-dd45-413e-8186-32ee537ce607]: GET /orders
+2026-03-16T10:59:05.875Z [INFO]: GET /account
+2026-03-16T10:59:05.875Z [INFO] [aea49dfa-37d0-4136-a278-b657b87bde4b]: GET /account
+2026-03-16T10:59:09.648Z [INFO]: GET /accounts
+2026-03-16T10:59:09.648Z [INFO] [987866c7-c7ac-48cc-a485-052fb9ec7a4a]: GET /accounts
+2026-03-16T11:06:45.043Z [INFO]: Graceful shutdown initiated
+2026-03-16T11:33:39.265Z [INFO]: Middlewares loaded
+2026-03-16T11:33:39.297Z [INFO]: Database connected
+2026-03-16T11:33:39.297Z [INFO]: Routes mounted: Product endpoints
+2026-03-16T11:33:39.299Z [INFO]: Server started on port 5000
+2026-03-16T11:34:48.828Z [INFO]: POST /accounts
+2026-03-16T11:34:48.828Z [INFO] [3cd13e55-6d70-4e3d-ba49-d3d74910dc21]: POST /accounts
+2026-03-16T11:34:48.833Z [ERROR] [3cd13e55-6d70-4e3d-ba49-d3d74910dc21]: Account validation failed: password: Path `password` is required., lastName: Path `lastName` is required., firstName: Path `firstName` is required. | {"stack":"ValidationError: Account validation failed: password: Path `password` is required., lastName: Path `lastName` is required., firstName: Path `firstName` is required.\n    at Document.invalidate (/home/rasaaltewari/training/week-4/node_modules/mongoose/lib/document.js:3420:32)\n    at validatePath (/home/rasaaltewari/training/week-4/node_modules/mongoose/lib/document.js:3192:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async Promise.all (index 0)\n    at async model.$__validate (/home/rasaaltewari/training/week-4/node_modules/mongoose/lib/document.js:3133:3)\n    at async model.validate (/home/rasaaltewari/training/week-4/node_modules/mongoose/lib/document.js:2702:5)\n    at async model.validateBeforeSavePreSave (/home/rasaaltewari/training/week-4/node_modules/mongoose/lib/plugins/validateBeforeSave.js:39:5)\n    at async Kareem.execPre (/home/rasaaltewari/training/week-4/node_modules/kareem/index.js:70:24)\n    at async model.$__save (/home/rasaaltewari/training/week-4/node_modules/mongoose/lib/model.js:376:5)\n    at async model.save (/home/rasaaltewari/training/week-4/node_modules/mongoose/lib/model.js:642:5)","path":"/accounts","method":"POST"}
+2026-03-16T11:37:10.584Z [INFO]: POST /accounts
+2026-03-16T11:37:10.585Z [INFO] [329fc936-08b9-43d0-8a25-777934f99314]: POST /accounts
+2026-03-16T11:38:19.019Z [INFO]: POST /accounts
+2026-03-16T11:38:19.020Z [INFO] [623e5623-5270-4d11-ab67-97d8e37445df]: POST /accounts
+2026-03-16T11:38:19.083Z [ERROR] [623e5623-5270-4d11-ab67-97d8e37445df]: E11000 duplicate key error collection: localdb.accounts index: email_1 dup key: { email: "john@gmail.com" } | {"stack":"MongoServerError: E11000 duplicate key error collection: localdb.accounts index: email_1 dup key: { email: \"john@gmail.com\" }\n    at InsertOneOperation.handleOk (/home/rasaaltewari/training/week-4/node_modules/mongodb/lib/operations/insert.js:51:19)\n    at tryOperation (/home/rasaaltewari/training/week-4/node_modules/mongodb/lib/operations/execute_operation.js:216:34)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async executeOperation (/home/rasaaltewari/training/week-4/node_modules/mongodb/lib/operations/execute_operation.js:80:16)\n    at async Collection.insertOne (/home/rasaaltewari/training/week-4/node_modules/mongodb/lib/collection.js:154:16)\n    at async model.$__save (/home/rasaaltewari/training/week-4/node_modules/mongoose/lib/model.js:405:16)\n    at async model.save (/home/rasaaltewari/training/week-4/node_modules/mongoose/lib/model.js:642:5)\n    at async /home/rasaaltewari/training/week-4/node_modules/mongoose/lib/model.js:2778:9\n    at async Promise.all (index 0)\n    at async model.create (/home/rasaaltewari/training/week-4/node_modules/mongoose/lib/model.js:2763:11)","path":"/accounts","method":"POST"}
+2026-03-16T11:38:36.431Z [INFO]: GET /accounts
+2026-03-16T11:38:36.431Z [INFO] [d85ed061-1b60-409e-9a27-7dc20363af4a]: GET /accounts
+2026-03-16T11:39:57.702Z [INFO]: GET /account
+2026-03-16T11:39:57.702Z [INFO] [a8abc1ab-8fac-4ce9-94b5-d8d671a40f09]: GET /account
+2026-03-16T11:40:04.422Z [INFO]: GET /accounts
+2026-03-16T11:40:04.422Z [INFO] [0c9973eb-f3cb-490e-80fe-68fa8368bb71]: GET /accounts
+2026-03-16T12:02:35.270Z [INFO]: Middlewares loaded
+2026-03-16T12:02:35.300Z [INFO]: Database connected
+2026-03-16T12:02:35.300Z [INFO]: Routes mounted: Product endpoints
+2026-03-16T12:02:35.301Z [INFO]: Server started on port 5000
+2026-03-16T12:05:04.721Z [INFO]: Middlewares loaded
+2026-03-16T12:05:04.745Z [INFO]: Database connected
+2026-03-16T12:05:04.745Z [INFO]: Routes mounted: Product endpoints
+2026-03-16T12:05:04.747Z [INFO]: Server started on port 5000
+2026-03-16T12:05:07.215Z [INFO]: Middlewares loaded
+2026-03-16T12:05:07.253Z [INFO]: Database connected
+2026-03-16T12:05:07.253Z [INFO]: Routes mounted: Product endpoints
+2026-03-16T12:05:07.255Z [INFO]: Server started on port 5000
+2026-03-16T12:05:11.108Z [INFO]: Middlewares loaded
+2026-03-16T12:05:11.137Z [INFO]: Database connected
+2026-03-16T12:05:11.137Z [INFO]: Routes mounted: Product endpoints
+2026-03-16T12:05:11.139Z [INFO]: Server started on port 5000
+2026-03-16T12:05:12.156Z [INFO]: Middlewares loaded
+2026-03-16T12:05:12.179Z [INFO]: Database connected
+2026-03-16T12:05:12.180Z [INFO]: Routes mounted: Product endpoints
+2026-03-16T12:05:12.181Z [INFO]: Server started on port 5000
+2026-03-16T12:05:18.373Z [INFO]: Middlewares loaded
+2026-03-16T12:05:18.403Z [INFO]: Database connected
+2026-03-16T12:05:18.404Z [INFO]: Routes mounted: Product endpoints
+2026-03-16T12:05:18.406Z [INFO]: Server started on port 5000
+2026-03-16T12:05:20.337Z [INFO]: Middlewares loaded
+2026-03-16T12:05:20.365Z [INFO]: Database connected
+2026-03-16T12:05:20.365Z [INFO]: Routes mounted: Product endpoints
+2026-03-16T12:05:20.367Z [INFO]: Server started on port 5000
+2026-03-16T12:05:21.659Z [INFO]: Middlewares loaded
+2026-03-16T12:05:21.683Z [INFO]: Database connected
+2026-03-16T12:05:21.684Z [INFO]: Routes mounted: Product endpoints
+2026-03-16T12:05:21.686Z [INFO]: Server started on port 5000
+2026-03-16T12:05:22.854Z [INFO]: Middlewares loaded
+2026-03-16T12:05:22.886Z [INFO]: Database connected
+2026-03-16T12:05:22.886Z [INFO]: Routes mounted: Product endpoints
+2026-03-16T12:05:22.888Z [INFO]: Server started on port 5000
+2026-03-16T12:05:28.126Z [INFO]: Middlewares loaded
+2026-03-16T12:05:28.154Z [INFO]: Database connected
+2026-03-16T12:05:28.155Z [INFO]: Routes mounted: Product endpoints
+2026-03-16T12:05:28.156Z [INFO]: Server started on port 5000
+2026-03-16T12:05:31.297Z [INFO]: Middlewares loaded
+2026-03-16T12:05:31.324Z [INFO]: Database connected
+2026-03-16T12:05:31.324Z [INFO]: Routes mounted: Product endpoints
+2026-03-16T12:05:31.326Z [INFO]: Server started on port 5000
+2026-03-16T12:05:44.617Z [INFO]: Middlewares loaded
+2026-03-16T12:05:44.644Z [INFO]: Database connected
+2026-03-16T12:05:44.644Z [INFO]: Routes mounted: Product endpoints
+2026-03-16T12:05:44.646Z [INFO]: Server started on port 5000
+2026-03-16T12:06:02.262Z [INFO]: Middlewares loaded
+2026-03-16T12:06:02.288Z [INFO]: Database connected
+2026-03-16T12:06:02.288Z [INFO]: Routes mounted: Product endpoints
+2026-03-16T12:06:02.290Z [INFO]: Server started on port 5000
+2026-03-16T12:06:03.994Z [INFO]: Middlewares loaded
+2026-03-16T12:06:04.032Z [INFO]: Database connected
+2026-03-16T12:06:04.033Z [INFO]: Routes mounted: Product endpoints
+2026-03-16T12:06:04.035Z [INFO]: Server started on port 5000
+2026-03-16T12:06:43.825Z [INFO]: Middlewares loaded
+2026-03-16T12:06:43.849Z [INFO]: Database connected
+2026-03-16T12:06:43.849Z [INFO]: Routes mounted: Product endpoints
+2026-03-16T12:06:43.851Z [INFO]: Server started on port 5000
+2026-03-16T12:07:12.061Z [INFO]: Middlewares loaded
+2026-03-16T12:07:12.090Z [INFO]: Database connected
+2026-03-16T12:07:12.091Z [INFO]: Routes mounted: Product endpoints
+2026-03-16T12:07:12.092Z [INFO]: Server started on port 5000
+2026-03-16T12:07:22.271Z [INFO]: Middlewares loaded
+2026-03-16T12:07:22.295Z [INFO]: Database connected
+2026-03-16T12:07:22.296Z [INFO]: Routes mounted: Product endpoints
+2026-03-16T12:07:22.297Z [INFO]: Server started on port 5000
+2026-03-16T12:07:24.452Z [INFO]: Middlewares loaded
+2026-03-16T12:07:24.479Z [INFO]: Database connected
+2026-03-16T12:07:24.479Z [INFO]: Routes mounted: Product endpoints
+2026-03-16T12:07:24.481Z [INFO]: Server started on port 5000
+2026-03-16T12:07:32.635Z [INFO]: Middlewares loaded
+2026-03-16T12:07:32.665Z [INFO]: Database connected
+2026-03-16T12:07:32.665Z [INFO]: Routes mounted: Product endpoints
+2026-03-16T12:07:32.668Z [INFO]: Server started on port 5000
+2026-03-16T12:07:34.302Z [INFO]: Middlewares loaded
+2026-03-16T12:07:34.330Z [INFO]: Database connected
+2026-03-16T12:07:34.330Z [INFO]: Routes mounted: Product endpoints
+2026-03-16T12:07:34.332Z [INFO]: Server started on port 5000
+2026-03-16T12:07:49.362Z [INFO]: Middlewares loaded
+2026-03-16T12:07:49.386Z [INFO]: Database connected
+2026-03-16T12:07:49.386Z [INFO]: Routes mounted: Product endpoints
+2026-03-16T12:07:49.388Z [INFO]: Server started on port 5000
+2026-03-16T12:08:14.890Z [INFO]: Middlewares loaded
+2026-03-16T12:08:14.915Z [INFO]: Database connected
+2026-03-16T12:08:14.915Z [INFO]: Routes mounted: Product endpoints
+2026-03-16T12:08:14.917Z [INFO]: Server started on port 5000
+2026-03-16T12:08:16.778Z [INFO]: Middlewares loaded
+2026-03-16T12:08:16.799Z [INFO]: Database connected
+2026-03-16T12:08:16.800Z [INFO]: Routes mounted: Product endpoints
+2026-03-16T12:08:16.802Z [INFO]: Server started on port 5000
+2026-03-16T12:08:17.955Z [INFO]: Middlewares loaded
+2026-03-16T12:08:17.980Z [INFO]: Database connected
+2026-03-16T12:08:17.981Z [INFO]: Routes mounted: Product endpoints
+2026-03-16T12:08:17.983Z [INFO]: Server started on port 5000
+2026-03-16T12:08:25.800Z [INFO]: Graceful shutdown initiated
+2026-03-16T12:08:29.249Z [INFO]: Middlewares loaded
+2026-03-16T12:08:29.274Z [INFO]: Database connected
+2026-03-16T12:08:29.274Z [INFO]: Routes mounted: Product endpoints
+2026-03-16T12:08:29.276Z [INFO]: Server started on port 5000
+2026-03-16T12:08:57.047Z [INFO]: GET /orders
+2026-03-16T12:08:57.047Z [INFO] [2b906618-cac7-4909-a147-7f2f346f83c8]: GET /orders
+2026-03-16T12:10:46.755Z [INFO]: POST /orders
+2026-03-16T12:10:46.755Z [INFO] [44f593ce-f5ae-4b0b-b07a-1bbfd2aff76d]: POST /orders
+2026-03-16T12:20:33.195Z [INFO]: Graceful shutdown initiated
+2026-03-16T12:33:00.112Z [INFO]: Middlewares loaded
+2026-03-16T12:33:00.187Z [INFO]: Database connected
+2026-03-16T12:33:00.188Z [INFO]: Routes mounted: Product endpoints
+2026-03-16T12:33:00.195Z [INFO]: Server started on port 5000
+2026-03-16T12:33:05.594Z [INFO]: GET /products?includeDeleted=true
+2026-03-16T12:33:05.595Z [INFO] [ecb096c1-5877-453d-9b1f-70ed70543cd7]: GET /products?includeDeleted=true
+2026-03-16T12:33:05.595Z [INFO] [ecb096c1-5877-453d-9b1f-70ed70543cd7]: Fetching products | {"query":{"includeDeleted":"true"}}
+2026-03-16T12:33:05.614Z [INFO] [ecb096c1-5877-453d-9b1f-70ed70543cd7]: Products fetched successfully | {"count":10}
+2026-03-16T12:35:25.997Z [INFO]: Graceful shutdown initiated
+2026-03-17T05:52:52.620Z [INFO]: Middlewares loaded
+2026-03-17T05:52:52.668Z [INFO]: Database connected
+2026-03-17T05:52:52.669Z [INFO]: Routes mounted: Product endpoints
+2026-03-17T05:52:52.672Z [INFO]: Server started on port 5000
+2026-03-17T06:03:02.356Z [INFO]: Graceful shutdown initiated
+2026-03-17T11:05:36.534Z [INFO]: Middlewares loaded
+2026-03-17T11:05:36.561Z [INFO]: Database connected
+2026-03-17T11:05:36.561Z [INFO]: Routes mounted: Product endpoints
+2026-03-17T11:05:36.565Z [INFO]: Server started on port 5000
+2026-03-17T11:06:34.238Z [INFO]: GET /products/email
+2026-03-17T11:06:34.238Z [INFO] [bf5f2533-c370-4525-adb5-9d46ade91a70]: GET /products/email
+2026-03-17T11:07:11.136Z [INFO]: GET /products/email
+2026-03-17T11:07:11.136Z [INFO] [88ebb61a-39d6-42c8-a8bf-c55f15fb3f29]: GET /products/email
+2026-03-17T11:15:54.711Z [INFO]: Middlewares loaded
+2026-03-17T11:15:54.736Z [INFO]: Database connected
+2026-03-17T11:15:54.736Z [INFO]: Routes mounted: Product endpoints
+2026-03-17T11:15:54.738Z [INFO]: Server started on port 5000
+2026-03-17T11:16:15.410Z [INFO]: Middlewares loaded
+2026-03-17T11:16:15.435Z [INFO]: Database connected
+2026-03-17T11:16:15.436Z [INFO]: Routes mounted: Product endpoints
+2026-03-17T11:16:15.437Z [INFO]: Server started on port 5000
+2026-03-17T11:16:20.530Z [INFO]: Middlewares loaded
+2026-03-17T11:16:20.555Z [INFO]: Database connected
+2026-03-17T11:16:20.556Z [INFO]: Routes mounted: Product endpoints
+2026-03-17T11:16:20.557Z [INFO]: Server started on port 5000
+2026-03-17T11:16:36.274Z [INFO]: Middlewares loaded
+2026-03-17T11:16:36.296Z [INFO]: Database connected
+2026-03-17T11:16:36.296Z [INFO]: Routes mounted: Product endpoints
+2026-03-17T11:16:36.298Z [INFO]: Server started on port 5000
+2026-03-17T11:17:07.745Z [INFO]: Middlewares loaded
+2026-03-17T11:17:07.770Z [INFO]: Database connected
+2026-03-17T11:17:07.770Z [INFO]: Routes mounted: Product endpoints
+2026-03-17T11:17:07.772Z [INFO]: Server started on port 5000
+2026-03-17T11:17:11.210Z [INFO]: Middlewares loaded
+2026-03-17T11:17:11.232Z [INFO]: Database connected
+2026-03-17T11:17:11.232Z [INFO]: Routes mounted: Product endpoints
+2026-03-17T11:17:11.234Z [INFO]: Server started on port 5000
+2026-03-17T11:17:13.348Z [INFO]: Middlewares loaded
+2026-03-17T11:17:13.376Z [INFO]: Database connected
+2026-03-17T11:17:13.377Z [INFO]: Routes mounted: Product endpoints
+2026-03-17T11:17:13.379Z [INFO]: Server started on port 5000
+2026-03-17T11:17:25.799Z [INFO]: Middlewares loaded
+2026-03-17T11:17:25.823Z [INFO]: Database connected
+2026-03-17T11:17:25.824Z [INFO]: Routes mounted: Product endpoints
+2026-03-17T11:17:25.825Z [INFO]: Server started on port 5000
+2026-03-17T11:17:27.432Z [INFO]: Middlewares loaded
+2026-03-17T11:17:27.455Z [INFO]: Database connected
+2026-03-17T11:17:27.455Z [INFO]: Routes mounted: Product endpoints
+2026-03-17T11:17:27.457Z [INFO]: Server started on port 5000
+2026-03-17T11:17:41.758Z [INFO]: Middlewares loaded
+2026-03-17T11:17:41.793Z [INFO]: Database connected
+2026-03-17T11:17:41.794Z [INFO]: Routes mounted: Product endpoints
+2026-03-17T11:17:41.798Z [INFO]: Server started on port 5000
+2026-03-17T11:18:03.742Z [INFO]: Middlewares loaded
+2026-03-17T11:18:03.766Z [INFO]: Database connected
+2026-03-17T11:18:03.766Z [INFO]: Routes mounted: Product endpoints
+2026-03-17T11:18:03.768Z [INFO]: Server started on port 5000
+2026-03-17T11:18:05.063Z [INFO]: Middlewares loaded
+2026-03-17T11:18:05.089Z [INFO]: Database connected
+2026-03-17T11:18:05.090Z [INFO]: Routes mounted: Product endpoints
+2026-03-17T11:18:05.092Z [INFO]: Server started on port 5000
+2026-03-17T11:18:06.117Z [INFO]: Middlewares loaded
+2026-03-17T11:18:06.142Z [INFO]: Database connected
+2026-03-17T11:18:06.142Z [INFO]: Routes mounted: Product endpoints
+2026-03-17T11:18:06.144Z [INFO]: Server started on port 5000
+2026-03-17T11:18:28.189Z [INFO]: Middlewares loaded
+2026-03-17T11:18:28.219Z [INFO]: Database connected
+2026-03-17T11:18:28.220Z [INFO]: Routes mounted: Product endpoints
+2026-03-17T11:18:28.223Z [INFO]: Server started on port 5000
+2026-03-17T11:18:30.868Z [INFO]: Middlewares loaded
+2026-03-17T11:18:30.892Z [INFO]: Database connected
+2026-03-17T11:18:30.892Z [INFO]: Routes mounted: Product endpoints
+2026-03-17T11:18:30.894Z [INFO]: Server started on port 5000
+2026-03-17T11:18:49.509Z [INFO]: Middlewares loaded
+2026-03-17T11:18:49.534Z [INFO]: Database connected
+2026-03-17T11:18:49.535Z [INFO]: Routes mounted: Product endpoints
+2026-03-17T11:18:49.536Z [INFO]: Server started on port 5000
+2026-03-17T11:19:54.637Z [INFO]: POST /products/email
+2026-03-17T11:19:54.637Z [INFO] [818b297a-0e0e-4917-b042-37a4796cf0cb]: POST /products/email
+2026-03-17T11:19:54.642Z [INFO]: Processing email job for test@gmail.com
+2026-03-17T11:19:56.645Z [INFO]: Email sent to test@gmail.com
+2026-03-17T11:20:00.106Z [INFO]: POST /products/email
+2026-03-17T11:20:00.106Z [INFO] [6867bd99-b48b-48ee-955b-e9223d01e65f]: POST /products/email
+2026-03-17T11:20:00.108Z [INFO]: Processing email job for test@gmail.com
+2026-03-17T11:20:02.109Z [INFO]: Email sent to test@gmail.com
+2026-03-17T11:34:33.854Z [INFO]: Middlewares loaded
+2026-03-17T11:34:33.884Z [INFO]: Database connected
+2026-03-17T11:34:33.885Z [INFO]: Routes mounted: Product endpoints
+2026-03-17T11:34:33.886Z [INFO]: Server started on port 5000
+2026-03-17T11:35:31.358Z [INFO]: Middlewares loaded
+2026-03-17T11:35:31.383Z [INFO]: Database connected
+2026-03-17T11:35:31.384Z [INFO]: Routes mounted: Product endpoints
+2026-03-17T11:35:31.385Z [INFO]: Server started on port 5000
+2026-03-17T11:35:52.964Z [INFO]: Middlewares loaded
+2026-03-17T11:35:52.994Z [INFO]: Database connected
+2026-03-17T11:35:52.994Z [INFO]: Routes mounted: Product endpoints
+2026-03-17T11:35:52.996Z [INFO]: Server started on port 5000
+2026-03-17T11:36:26.742Z [INFO]: Middlewares loaded
+2026-03-17T11:36:26.772Z [INFO]: Database connected
+2026-03-17T11:36:26.773Z [INFO]: Routes mounted: Product endpoints
+2026-03-17T11:36:26.775Z [INFO]: Server started on port 5000
+2026-03-17T11:37:01.254Z [INFO]: Middlewares loaded
+2026-03-17T11:37:01.280Z [INFO]: Database connected
+2026-03-17T11:37:01.280Z [INFO]: Routes mounted: Product endpoints
+2026-03-17T11:37:01.282Z [INFO]: Server started on port 5000
+2026-03-17T11:37:15.239Z [INFO]: Middlewares loaded
+2026-03-17T11:37:15.261Z [INFO]: Database connected
+2026-03-17T11:37:15.261Z [INFO]: Routes mounted: Product endpoints
+2026-03-17T11:37:15.263Z [INFO]: Server started on port 5000
+2026-03-17T11:37:17.166Z [INFO]: Middlewares loaded
+2026-03-17T11:37:17.193Z [INFO]: Database connected
+2026-03-17T11:37:17.193Z [INFO]: Routes mounted: Product endpoints
+2026-03-17T11:37:17.195Z [INFO]: Server started on port 5000
+2026-03-17T11:37:30.085Z [INFO]: Middlewares loaded
+2026-03-17T11:37:30.110Z [INFO]: Database connected
+2026-03-17T11:37:30.110Z [INFO]: Routes mounted: Product endpoints
+2026-03-17T11:37:30.112Z [INFO]: Server started on port 5000
+2026-03-17T11:38:58.402Z [INFO]: Middlewares loaded
+2026-03-17T11:38:58.427Z [INFO]: Database connected
+2026-03-17T11:38:58.427Z [INFO]: Routes mounted: Product endpoints
+2026-03-17T11:38:58.429Z [INFO]: Server started on port 5000
+2026-03-17T11:39:04.704Z [INFO]: Middlewares loaded
+2026-03-17T11:39:04.749Z [INFO]: Database connected
+2026-03-17T11:39:04.749Z [INFO]: Routes mounted: Product endpoints
+2026-03-17T11:39:04.751Z [INFO]: Server started on port 5000
+2026-03-17T11:39:29.825Z [INFO]: Middlewares loaded
+2026-03-17T11:39:29.862Z [INFO]: Database connected
+2026-03-17T11:39:29.862Z [INFO]: Routes mounted: Product endpoints
+2026-03-17T11:39:29.865Z [INFO]: Server started on port 5000
+2026-03-17T11:48:00.916Z [INFO]: POST /products/email
+2026-03-17T11:48:00.917Z [INFO] [91f1a3d1-0476-48f1-9e7a-c6133ee54bee]: POST /products/email
+2026-03-17T11:48:00.920Z [INFO]: Processing email job for test@gmail.com
+2026-03-17T11:48:02.921Z [INFO]: Email sent to test@gmail.com
+2026-03-17T11:48:29.835Z [INFO]: GET /users
+2026-03-17T11:48:29.835Z [INFO] [5c52e35b-3f47-47eb-9dd6-d5d789f12900]: GET /users
+2026-03-17T11:49:48.569Z [INFO]: POST /users
+2026-03-17T11:49:48.569Z [INFO] [77ace7c8-1a2d-40d4-be09-d187cb04d629]: POST /users
+2026-03-17T11:50:49.592Z [INFO]: POST /users
+2026-03-17T11:50:49.592Z [INFO] [a5a4266b-66f0-4a07-a620-0b669de89779]: POST /users
+2026-03-17T11:51:14.760Z [INFO]: POST /users
+2026-03-17T11:51:14.760Z [INFO] [b166c9cf-e20a-4a79-94af-3b9624dd77b4]: POST /users
+2026-03-17T11:52:03.756Z [INFO]: POST /users
+2026-03-17T11:52:03.756Z [INFO] [9e6cad07-78cf-48c5-9f89-c5857313bc2b]: POST /users
+2026-03-17T11:52:21.599Z [INFO]: POST /users
+2026-03-17T11:52:21.600Z [INFO] [ebcded30-5058-48db-b969-a401863c5eb8]: POST /users
+2026-03-17T11:53:05.446Z [INFO]: POST /users
+2026-03-17T11:53:05.446Z [INFO] [f03eeca9-c1ff-491a-81c2-1c6642b1f96e]: POST /users
+2026-03-17T11:53:50.052Z [INFO]: POST /users
+2026-03-17T11:53:50.052Z [INFO] [7dfda008-a0b7-42de-a170-b4e2fee269f2]: POST /users
+2026-03-17T11:54:10.973Z [INFO]: POST /users
+2026-03-17T11:54:10.973Z [INFO] [3edd9368-f0ce-44c0-b1d8-3adf99356c43]: POST /users
+2026-03-17T11:54:30.760Z [INFO]: POST /users
+2026-03-17T11:54:30.760Z [INFO] [66a7e983-cda2-4bec-adab-d1c3760110f8]: POST /users
+2026-03-17T11:54:30.771Z [ERROR] [66a7e983-cda2-4bec-adab-d1c3760110f8]: E11000 duplicate key error collection: localdb.users index: email_1 dup key: { email: "am@gmail.com" } | {"stack":"MongoServerError: E11000 duplicate key error collection: localdb.users index: email_1 dup key: { email: \"am@gmail.com\" }\n    at InsertOneOperation.handleOk (/home/rasaaltewari/training/week-4/node_modules/mongodb/lib/operations/insert.js:51:19)\n    at tryOperation (/home/rasaaltewari/training/week-4/node_modules/mongodb/lib/operations/execute_operation.js:216:34)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async executeOperation (/home/rasaaltewari/training/week-4/node_modules/mongodb/lib/operations/execute_operation.js:80:16)\n    at async Collection.insertOne (/home/rasaaltewari/training/week-4/node_modules/mongodb/lib/collection.js:154:16)\n    at async model.$__save (/home/rasaaltewari/training/week-4/node_modules/mongoose/lib/model.js:405:16)\n    at async model.save (/home/rasaaltewari/training/week-4/node_modules/mongoose/lib/model.js:642:5)\n    at async /home/rasaaltewari/training/week-4/node_modules/mongoose/lib/model.js:2778:9\n    at async Promise.all (index 0)\n    at async model.create (/home/rasaaltewari/training/week-4/node_modules/mongoose/lib/model.js:2763:11)","path":"/users","method":"POST"}
+2026-03-17T11:54:49.113Z [INFO]: GET /users
+2026-03-17T11:54:49.114Z [INFO] [2d441313-bcd6-4a8a-9952-d255a7562470]: GET /users
+2026-03-17T11:57:41.919Z [INFO]: GET /users?page=1&limit=5
+2026-03-17T11:57:41.919Z [INFO] [3c25e767-ac4e-4478-bee0-287eec9cba79]: GET /users?page=1&limit=5
+2026-03-17T11:59:21.736Z [INFO]: GET /users?page=1&limit=5
+2026-03-17T11:59:21.736Z [INFO] [0b7d90ce-7b7f-40e5-ba47-e1cd6354dcf9]: GET /users?page=1&limit=5
+2026-03-17T11:59:32.904Z [INFO]: GET /users?page=2&limit=5
+2026-03-17T11:59:32.904Z [INFO] [4dd8f862-929f-4ada-b33c-06e04fc30a89]: GET /users?page=2&limit=5
+2026-03-17T11:59:50.600Z [INFO]: GET /users?page=3&limit=5
+2026-03-17T11:59:50.600Z [INFO] [005f67d7-d7b7-47f1-89ac-cc575bfd6825]: GET /users?page=3&limit=5
+2026-03-17T11:59:56.618Z [INFO]: GET /users?page=1&limit=5
+2026-03-17T11:59:56.618Z [INFO] [90a784d3-6206-4a1f-ad86-feda766187f0]: GET /users?page=1&limit=5
+2026-03-17T12:00:35.929Z [INFO]: Graceful shutdown initiated
+2026-03-19T05:26:34.937Z [INFO]: Middlewares loaded
+2026-03-19T05:26:34.983Z [INFO]: Database connected
+2026-03-19T05:26:34.983Z [INFO]: Routes mounted: Product endpoints
+2026-03-19T05:26:34.987Z [INFO]: Server started on port 5000
+2026-03-19T06:53:27.950Z [INFO]: Graceful shutdown initiated
+2026-03-19T06:59:31.188Z [INFO]: Middlewares loaded
+2026-03-19T06:59:31.217Z [INFO]: Database connected
+2026-03-19T06:59:31.217Z [INFO]: Routes mounted: Product endpoints
+2026-03-19T06:59:31.219Z [INFO]: Server started on port 5000
+2026-03-19T07:02:26.577Z [INFO]: POST /products/email
+2026-03-19T07:02:26.578Z [INFO] [d4a2dbb5-0dcc-4aa7-b800-11b8212a8966]: POST /products/email
+2026-03-19T07:02:26.584Z [INFO]: Processing email job for test1@gmail.com
+2026-03-19T07:02:28.585Z [INFO]: Email sent to test1@gmail.com
+2026-03-19T07:02:58.663Z [INFO]: GET /favicon.ico
+2026-03-19T07:02:58.663Z [INFO] [dbcfdad0-2c25-4434-ab47-9f31e334f243]: GET /favicon.ico
+2026-03-19T07:03:33.444Z [INFO]: Middlewares loaded
+2026-03-19T07:03:33.469Z [INFO]: Database connected
+2026-03-19T07:03:33.469Z [INFO]: Routes mounted: Product endpoints
+2026-03-19T07:03:33.471Z [INFO]: Server started on port 5000
+2026-03-19T07:03:55.909Z [INFO]: Middlewares loaded
+2026-03-19T07:03:55.931Z [INFO]: Database connected
+2026-03-19T07:03:55.931Z [INFO]: Routes mounted: Product endpoints
+2026-03-19T07:03:55.933Z [INFO]: Server started on port 5000
+2026-03-19T07:03:57.212Z [INFO]: Middlewares loaded
+2026-03-19T07:03:57.237Z [INFO]: Database connected
+2026-03-19T07:03:57.237Z [INFO]: Routes mounted: Product endpoints
+2026-03-19T07:03:57.239Z [INFO]: Server started on port 5000
+2026-03-19T07:05:02.096Z [INFO]: Graceful shutdown initiated
+2026-03-19T07:12:35.882Z [INFO]: Middlewares loaded
+2026-03-19T07:12:35.908Z [INFO]: Database connected
+2026-03-19T07:12:35.908Z [INFO]: Routes mounted: Product endpoints
+2026-03-19T07:12:35.910Z [INFO]: Server started on port 5000
+2026-03-19T07:12:37.538Z [INFO]: Graceful shutdown initiated
+2026-03-19T07:17:01.076Z [INFO]: Middlewares loaded
+2026-03-19T07:17:01.103Z [INFO]: Database connected
+2026-03-19T07:17:01.103Z [INFO]: Routes mounted: Product endpoints
+2026-03-19T07:17:01.105Z [INFO]: Server started on port 5000
+2026-03-19T07:25:54.532Z [INFO]: Graceful shutdown initiated
+2026-03-19T07:29:32.631Z [INFO]: Middlewares loaded
+2026-03-19T07:29:32.655Z [INFO]: Database connected
+2026-03-19T07:29:32.655Z [INFO]: Routes mounted: Product endpoints
+2026-03-19T07:29:32.657Z [INFO]: Server started on port 5000
+2026-03-19T07:31:00.223Z [ERROR] [fa16bd60-274d-4f8a-8832-1d0b2a17c7f3]: Cannot set property query of #<IncomingMessage> which has only a getter | {"stack":"TypeError: Cannot set property query of #<IncomingMessage> which has only a getter\n    at /home/rasaaltewari/training/week-4/node_modules/express-mongo-sanitize/index.js:113:18\n    at Array.forEach (<anonymous>)\n    at /home/rasaaltewari/training/week-4/node_modules/express-mongo-sanitize/index.js:110:44\n    at Layer.handleRequest (/home/rasaaltewari/training/week-4/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/rasaaltewari/training/week-4/node_modules/router/index.js:342:13)\n    at /home/rasaaltewari/training/week-4/node_modules/router/index.js:297:9\n    at processParams (/home/rasaaltewari/training/week-4/node_modules/router/index.js:582:12)\n    at next (/home/rasaaltewari/training/week-4/node_modules/router/index.js:291:5)\n    at cors (/home/rasaaltewari/training/week-4/node_modules/cors/lib/index.js:188:7)\n    at /home/rasaaltewari/training/week-4/node_modules/cors/lib/index.js:224:17","path":"/products","method":"POST"}
+2026-03-19T07:31:33.041Z [ERROR] [4a8db756-5ff9-4e44-be84-4472cc283899]: Cannot set property query of #<IncomingMessage> which has only a getter | {"stack":"TypeError: Cannot set property query of #<IncomingMessage> which has only a getter\n    at /home/rasaaltewari/training/week-4/node_modules/express-mongo-sanitize/index.js:113:18\n    at Array.forEach (<anonymous>)\n    at /home/rasaaltewari/training/week-4/node_modules/express-mongo-sanitize/index.js:110:44\n    at Layer.handleRequest (/home/rasaaltewari/training/week-4/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/rasaaltewari/training/week-4/node_modules/router/index.js:342:13)\n    at /home/rasaaltewari/training/week-4/node_modules/router/index.js:297:9\n    at processParams (/home/rasaaltewari/training/week-4/node_modules/router/index.js:582:12)\n    at next (/home/rasaaltewari/training/week-4/node_modules/router/index.js:291:5)\n    at cors (/home/rasaaltewari/training/week-4/node_modules/cors/lib/index.js:188:7)\n    at /home/rasaaltewari/training/week-4/node_modules/cors/lib/index.js:224:17","path":"/products","method":"POST"}
+2026-03-19T07:32:08.932Z [ERROR] [23cf93ed-339b-4a6e-8dbb-b937fe75d1cb]: Cannot set property query of #<IncomingMessage> which has only a getter | {"stack":"TypeError: Cannot set property query of #<IncomingMessage> which has only a getter\n    at /home/rasaaltewari/training/week-4/node_modules/express-mongo-sanitize/index.js:113:18\n    at Array.forEach (<anonymous>)\n    at /home/rasaaltewari/training/week-4/node_modules/express-mongo-sanitize/index.js:110:44\n    at Layer.handleRequest (/home/rasaaltewari/training/week-4/node_modules/router/lib/layer.js:152:17)\n    at trimPrefix (/home/rasaaltewari/training/week-4/node_modules/router/index.js:342:13)\n    at /home/rasaaltewari/training/week-4/node_modules/router/index.js:297:9\n    at processParams (/home/rasaaltewari/training/week-4/node_modules/router/index.js:582:12)\n    at next (/home/rasaaltewari/training/week-4/node_modules/router/index.js:291:5)\n    at cors (/home/rasaaltewari/training/week-4/node_modules/cors/lib/index.js:188:7)\n    at /home/rasaaltewari/training/week-4/node_modules/cors/lib/index.js:224:17","path":"/products","method":"POST"}
+2026-03-19T07:32:34.052Z [INFO]: Middlewares loaded
+2026-03-19T07:32:34.079Z [INFO]: Database connected
+2026-03-19T07:32:34.080Z [INFO]: Routes mounted: Product endpoints
+2026-03-19T07:32:34.081Z [INFO]: Server started on port 5000
+2026-03-19T07:32:37.894Z [INFO]: POST /products
+2026-03-19T07:32:37.894Z [INFO] [a5cc85ea-145b-470a-a1b5-3d3a05c1447c]: POST /products
+2026-03-19T07:32:37.897Z [INFO] [a5cc85ea-145b-470a-a1b5-3d3a05c1447c]: Creating product | {"body":{"name":"&lt;script&gt;alert('hack')&lt;/script&gt;","price":20000,"tags":[]}}
+2026-03-19T07:32:37.911Z [INFO] [a5cc85ea-145b-470a-a1b5-3d3a05c1447c]: Product created successfully | {"productId":"69bba695c0bcc50a12dba945"}
+2026-03-19T07:32:45.780Z [INFO]: Graceful shutdown initiated
+2026-03-19T07:40:35.209Z [INFO]: Middlewares loaded
+2026-03-19T07:40:35.246Z [INFO]: Database connected
+2026-03-19T07:40:35.247Z [INFO]: Routes mounted: Product endpoints
+2026-03-19T07:40:35.249Z [INFO]: Server started on port 5000
+2026-03-19T07:40:50.922Z [INFO]: GET /products?minPrice=100&maxPrice=500
+2026-03-19T07:40:50.922Z [INFO] [b6e1dfe9-f58e-45db-a9cf-b3d031f5ca4a]: GET /products?minPrice=100&maxPrice=500
+2026-03-19T07:40:50.923Z [INFO] [b6e1dfe9-f58e-45db-a9cf-b3d031f5ca4a]: Fetching products | {"query":{"minPrice":"100","maxPrice":"500"}}
+2026-03-19T07:40:50.930Z [INFO] [b6e1dfe9-f58e-45db-a9cf-b3d031f5ca4a]: Products fetched successfully | {"count":2}
+2026-03-19T07:41:03.601Z [INFO]: GET /products?minPrice=300&maxPrice=500
+2026-03-19T07:41:03.601Z [INFO] [3d97ff2a-1cb3-42e4-add5-63975e6da223]: GET /products?minPrice=300&maxPrice=500
+2026-03-19T07:41:03.601Z [INFO] [3d97ff2a-1cb3-42e4-add5-63975e6da223]: Fetching products | {"query":{"minPrice":"300","maxPrice":"500"}}
+2026-03-19T07:41:03.604Z [INFO] [3d97ff2a-1cb3-42e4-add5-63975e6da223]: Products fetched successfully | {"count":1}
+2026-03-19T07:41:25.286Z [INFO]: GET /products?search=phone
+2026-03-19T07:41:25.286Z [INFO] [f5d1d7c1-ae65-412c-a4b4-0f7611972fb5]: GET /products?search=phone
+2026-03-19T07:41:25.286Z [INFO] [f5d1d7c1-ae65-412c-a4b4-0f7611972fb5]: Fetching products | {"query":{"search":"phone"}}
+2026-03-19T07:41:25.289Z [INFO] [f5d1d7c1-ae65-412c-a4b4-0f7611972fb5]: Products fetched successfully | {"count":2}
+2026-03-19T07:41:26.588Z [INFO]: GET /products?search=phone
+2026-03-19T07:41:26.588Z [INFO] [7ab16d64-777a-4055-8c65-46cfee74acea]: GET /products?search=phone
+2026-03-19T07:41:26.588Z [INFO] [7ab16d64-777a-4055-8c65-46cfee74acea]: Fetching products | {"query":{"search":"phone"}}
+2026-03-19T07:41:26.591Z [INFO] [7ab16d64-777a-4055-8c65-46cfee74acea]: Products fetched successfully | {"count":2}
+2026-03-19T07:41:40.894Z [INFO]: GET /products?search=electronics
+2026-03-19T07:41:40.894Z [INFO] [d1526042-fda5-43d3-8bb1-769a553d0c24]: GET /products?search=electronics
+2026-03-19T07:41:40.895Z [INFO] [d1526042-fda5-43d3-8bb1-769a553d0c24]: Fetching products | {"query":{"search":"electronics"}}
+2026-03-19T07:41:40.897Z [INFO] [d1526042-fda5-43d3-8bb1-769a553d0c24]: Products fetched successfully | {"count":0}
+2026-03-19T08:16:17.245Z [INFO]: Graceful shutdown initiated
+2026-03-19T08:35:55.681Z [INFO]: Middlewares loaded
+2026-03-19T08:35:55.727Z [INFO]: Database connected
+2026-03-19T08:35:55.728Z [INFO]: Routes mounted: Product endpoints
+2026-03-19T08:35:55.731Z [INFO]: Server started on port 5000
+2026-03-19T08:38:56.897Z [INFO]: POST /products
+2026-03-19T08:38:56.898Z [INFO] [d8af0269-a14c-4be0-b75b-f4ffd30f727c]: POST /products
+2026-03-19T08:43:28.188Z [INFO]: Graceful shutdown initiated
+2026-03-19T10:39:28.373Z [INFO]: Middlewares loaded
+2026-03-19T10:39:28.419Z [INFO]: Database connected
+2026-03-19T10:39:28.419Z [INFO]: Routes mounted: Product endpoints
+2026-03-19T10:39:28.424Z [INFO]: Server started on port 5000
+2026-03-19T10:40:47.305Z [INFO]: GET /users?page=1&limit=5
+2026-03-19T10:40:47.305Z [INFO] [98347706-3903-4901-a7d2-27ed843abb76]: GET /users?page=1&limit=5
+2026-03-19T10:41:27.455Z [INFO]: GET /users
+2026-03-19T10:41:27.456Z [INFO] [b185108d-4de4-4c1b-ba98-9d123c3fad64]: GET /users
+2026-03-19T10:41:56.539Z [INFO]: GET /users?page=1&limit=2
+2026-03-19T10:41:56.539Z [INFO] [0ae2d8f5-9f11-4e21-99cb-4f95c762d0de]: GET /users?page=1&limit=2
+2026-03-19T10:42:32.124Z [INFO]: GET /users?page=5&limit=2
+2026-03-19T10:42:32.125Z [INFO] [00bac18e-7867-4b25-a748-c9f95698a754]: GET /users?page=5&limit=2
+2026-03-19T10:42:44.491Z [INFO]: GET /users?page=4&limit=2
+2026-03-19T10:42:44.492Z [INFO] [9d37bf06-acd5-4cac-8a5c-fb2acd9a15dd]: GET /users?page=4&limit=2
+2026-03-19T10:43:04.486Z [INFO]: GET /products
+2026-03-19T10:43:04.486Z [INFO] [c9c2d805-9bac-48e9-bc29-8b7972c7ec42]: GET /products
+2026-03-19T10:43:04.487Z [INFO] [c9c2d805-9bac-48e9-bc29-8b7972c7ec42]: Fetching products | {"query":{}}
+2026-03-19T10:43:04.496Z [INFO] [c9c2d805-9bac-48e9-bc29-8b7972c7ec42]: Products fetched successfully | {"count":10}
+2026-03-19T10:43:53.462Z [INFO]: DELETE /products/699ffead9b459caff401e286
+2026-03-19T10:43:53.463Z [INFO] [018bfeb0-a43e-42fe-8d58-442e8fd31a1d]: DELETE /products/699ffead9b459caff401e286
+2026-03-19T10:43:53.464Z [INFO] [018bfeb0-a43e-42fe-8d58-442e8fd31a1d]: Deleting product | {"productId":"699ffead9b459caff401e286"}
+2026-03-19T10:43:53.521Z [INFO] [018bfeb0-a43e-42fe-8d58-442e8fd31a1d]: Product deleted
+2026-03-19T10:44:19.389Z [INFO]: GET /products/699ffead9b459caff401e286
+2026-03-19T10:44:19.389Z [INFO] [6abc150c-c8a5-4c4e-99e4-04a158268b9d]: GET /products/699ffead9b459caff401e286
+2026-03-19T10:44:31.409Z [INFO]: GET /products
+2026-03-19T10:44:31.409Z [INFO] [6d0c5f55-6294-4859-85ba-2ed343d7f5b8]: GET /products
+2026-03-19T10:44:31.410Z [INFO] [6d0c5f55-6294-4859-85ba-2ed343d7f5b8]: Fetching products | {"query":{}}
+2026-03-19T10:44:31.414Z [INFO] [6d0c5f55-6294-4859-85ba-2ed343d7f5b8]: Products fetched successfully | {"count":9}
+2026-03-19T11:24:11.989Z [INFO]: Graceful shutdown initiated

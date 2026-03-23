@@ -1,8 +1,6 @@
 const productService = require("../services/product.service");
 const logger = require("../utils/logger");
 
-
-// CREATE
 async function createProduct(req,res,next){
 
  try{
@@ -28,7 +26,6 @@ async function createProduct(req,res,next){
 }
 
 
-// GET
 async function getProducts(req,res,next){
 
  try{
@@ -53,8 +50,6 @@ async function getProducts(req,res,next){
 
 }
 
-
-// DELETE
 async function deleteProduct(req,res,next){
 
  try{

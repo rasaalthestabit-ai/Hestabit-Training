@@ -1,7 +1,7 @@
 const buttons = document.querySelectorAll(".toggle-btn");
 
 buttons.forEach(button =>{
-    button.addEventListener("click", () => {
+    button.addEventListener("mouseover", () => {
         const faqItem = button.parentElement.parentElement;
         const answer = faqItem.querySelector(".answer");
 

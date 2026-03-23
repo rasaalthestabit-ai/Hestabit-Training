@@ -26,31 +26,16 @@ function sanitizeObject(obj){
 
 function security(app){
 
-  /*
-  Security Headers
-  */
   app.use(helmet());
 
-
-  /*
-  CORS
-  */
   app.use(cors());
 
-
-  /*
-  Rate Limit
-  */
   app.use(rateLimit({
     windowMs: 1*60*1000,
     max: 100,
     message: "Too many requests, try again later!"
   }));
 
-
-  /*
-  NoSQL Injection
-  */
   app.use((req,res,next)=>{
 
     function clean(obj){
@@ -79,10 +64,6 @@ function security(app){
 
 });
 
-
-  /*
-  XSS Protection
-  */
   app.use((req,res,next)=>{
 
     sanitizeObject(req.body);

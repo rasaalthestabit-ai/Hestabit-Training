@@ -60,7 +60,7 @@ body, html {
 }
 
 .content-1, .content-2, .content-3{
-    background: linear-gradient(1200deg, #051e99, #7caf9f);
+    background: linear-gradient(120deg, #051e99, #7caf9f);
     color: white;
     display: flex;
     align-items: center;
@@ -96,7 +96,7 @@ body, html {
         padding: 30px;
         height: 20vh;
     }
-};
+}
 
 @media (min-width: 769px) and (max-width: 1024px){
 
