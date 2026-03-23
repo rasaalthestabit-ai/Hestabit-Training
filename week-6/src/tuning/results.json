@@ -1,9 +1,8 @@
 {
-    "best_model": "SVM",
+    "best_model": "random_forest",
     "best_parameters": {
-        "C": 99.81805923774466,
-        "gamma": 0.03211422683285853,
-        "kernel": "rbf"
+        "n_estimators": 300,
+        "max_depth": 5
     },
-    "best_f1_score": 0.7582407847421871
+    "best_f1_score": 0.761475475037589
 }

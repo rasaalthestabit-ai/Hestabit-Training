@@ -6,9 +6,8 @@ This document analyzes the behavior and performance of the trained machine learn
 
 The analysis focuses on:
 
-* Hyperparameter tuning
-* Model explainability using SHAP
-* Feature importance
+* Model selection and comparison
+* Feature importance and explainability
 * Error analysis
 * Bias–variance evaluation
 
@@ -18,195 +17,185 @@ The goal is to understand **why the model makes certain predictions** and identi
 
 # Model Used
 
-From the model comparison phase, the **Support Vector Machine (SVM)** performed the best among the tested algorithms.
+From the model comparison phase, the **Random Forest Classifier** performed the best among the tested algorithms.
 
 The models compared were:
 
 * Logistic Regression
 * Random Forest
-* Decision Tree
-* Support Vector Machine (SVM)
+* LightGBM
+* Neural Network (MLP Classifier)
 
-SVM achieved the **highest cross-validation F1 score**, making it the best candidate for further optimization.
+Random Forest achieved the **highest cross-validation F1 score**, making it the best candidate for final deployment and further analysis.
+
+---
+
+# Model Selection Summary
+
+| Model               | CV F1 Score |
+| ------------------- | ----------- |
+| Logistic Regression | 0.7049      |
+| Random Forest       | **0.7445**  |
+| LightGBM            | 0.7331      |
+| Neural Network      | 0.7342      |
 
 ---
 
 # Hyperparameter Tuning
 
-To improve the model performance, hyperparameter tuning was performed using **Optuna**.
+After selecting the best model, hyperparameter tuning was performed using **Optuna** to further improve performance.
 
-Hyperparameters explored:
+For Random Forest, the following hyperparameters are typically optimized:
 
-* **C** – regularization strength
-* **gamma** – kernel influence
-* **kernel** – SVM kernel type
+* **n_estimators** – number of trees
+* **max_depth** – maximum depth of trees
+* **min_samples_split** – minimum samples required to split
+* **min_samples_leaf** – minimum samples in leaf nodes
 
 The objective was to maximize the **F1 Score using 5-fold cross-validation**.
 
-Example parameter search space:
+The tuning results are stored in:
 
-* C: 0.01 → 100
-* gamma: 0.0001 → 1
-* kernel: rbf, poly, sigmoid
-
-The tuning process ran multiple trials and selected the combination that produced the highest cross-validation performance.
-
-The results of tuning are stored in:
-
-```id="k5v4ht"
-/src/tuning/results.json
+```id="tune1"
+src/tuning/results.json
 ```
 
-Hyperparameter tuning helps the model achieve **better generalization and improved predictive performance**.
+This step helps improve **model generalization and robustness**.
 
 ---
 
 # Model Explainability
 
-Machine learning models can behave like black boxes, making it difficult to understand why a prediction was made.
+Unlike SVM, **Random Forest provides built-in interpretability** through feature importance scores.
 
-To interpret the model's behavior, explainability techniques were applied using **SHAP (SHapley Additive exPlanations)**.
+To further enhance interpretability, **SHAP (SHapley Additive exPlanations)** can be used.
 
-SHAP is based on concepts from **Game Theory**, where each feature contributes to the final prediction similarly to how players contribute to a game's outcome.
+SHAP is based on **game theory**, where each feature contributes to the prediction outcome.
 
-SHAP helps answer questions such as:
+It helps answer:
 
 * Which features influence predictions the most?
-* How does each feature push predictions higher or lower?
-
----
-
-# SHAP Summary Plot
-
-A SHAP summary plot was generated to visualize the impact of each feature across all predictions.
-
-The plot displays:
-
-* Feature importance ranking
-* Direction of feature influence
-* Distribution of SHAP values
-
-Features appearing higher in the plot contribute more strongly to model predictions.
-
-Example insights observed:
-
-* Higher **Meta Score** strongly increases the probability of predicting a highly rated movie.
-* Higher **Number of Votes** generally increases the predicted rating probability.
-* **Runtime** and **movie age** have smaller but noticeable effects.
-
-This visualization provides a global view of how the model uses features to make predictions.
+* How does each feature affect the prediction (positively or negatively)?
 
 ---
 
 # Feature Importance
 
-Feature importance was calculated using the **average absolute SHAP value** for each feature.
+Feature importance is computed using tree-based importance scores.
 
-The most influential features typically included:
+### Key Influential Features:
 
 1. Meta Score
 2. Number of Votes
-3. Runtime
-4. Movie Age
-5. Gross Revenue
+3. Gross Revenue
+4. Runtime
+5. Movie Age
 
-Interpretation:
+### Interpretation:
 
-* Movies with higher **Meta Scores** are more likely to receive higher IMDb ratings.
-* Movies with more **user votes** tend to be more popular and therefore often receive higher ratings.
-* **Movie age** can influence ratings because older classics often accumulate higher ratings over time.
+* **Meta Score** → Strongest indicator of high IMDb rating
+* **Number of Votes** → Reflects popularity and reliability of rating
+* **Gross Revenue** → Indicates commercial success
+* **Runtime & Movie Age** → Provide contextual signals
 
-These insights confirm that the model is relying on **meaningful movie metadata rather than random noise**.
+These features confirm that the model is using **meaningful real-world signals**.
+
+---
+
+# SHAP Explainability
+
+If SHAP is used, it provides:
+
+* Global feature importance ranking
+* Local explanations for individual predictions
+* Visualization of feature impact distribution
+
+Example insights:
+
+* Higher **Meta Score** increases probability of high rating
+* Higher **Votes** strongly push predictions toward positive class
+* Lower values may reduce confidence
+
+---
+
+# Final Model Evaluation
+
+The selected Random Forest model was evaluated on the test dataset:
+
+| Metric    | Score  |
+| --------- | ------ |
+| Accuracy  | 0.7577 |
+| Precision | 0.7818 |
+| Recall    | 0.7890 |
+| F1 Score  | 0.7854 |
+| ROC-AUC   | 0.8227 |
 
 ---
 
 # Error Analysis
 
-To better understand the model’s weaknesses, prediction errors were analyzed.
+To understand model limitations, prediction errors were analyzed.
 
-Two types of errors occur in classification:
+### Types of Errors:
 
 **False Positives**
 
-The model predicts a movie will have a high rating, but the actual rating is lower.
+* Model predicts high rating, but actual rating is low
 
 **False Negatives**
 
-The model predicts a lower rating, but the movie actually has a high rating.
+* Model predicts low rating, but actual rating is high
 
-An **error analysis heatmap** was generated to examine correlations between features and prediction mistakes.
+### Observations:
 
-This helps identify patterns such as:
+* Movies with **low vote counts** may be misclassified
+* Noisy or missing metadata can affect predictions
+* Some edge cases in **mid-range meta scores** cause confusion
 
-* Movies with very few votes being misclassified
-* Movies with missing or noisy metadata causing prediction errors
-* Certain runtime ranges leading to incorrect predictions
-
-Understanding these patterns helps guide **future feature engineering improvements**.
+This analysis helps guide **future improvements in feature engineering**.
 
 ---
 
 # Bias–Variance Analysis
 
-Bias–variance analysis helps determine whether a model is:
+| Metric              | Value  |
+| ------------------- | ------ |
+| Cross Validation F1 | 0.7445 |
+| Test F1 Score       | 0.7854 |
 
-* Too simple (high bias)
-* Too complex (high variance)
+### Interpretation:
 
-The model evaluation results were compared:
+* Test score is slightly higher than CV score → good generalization
+* No significant overfitting observed
+* Model maintains stability across datasets
 
-| Metric              | Value |
-| ------------------- | ----- |
-| Cross Validation F1 | ~0.75 |
-| Test F1 Score       | ~0.76 |
-
-Because the cross-validation score and test score are close, the model shows **good generalization**.
-
-This indicates:
-
-* Low overfitting
-* Stable learning behavior
-* Balanced bias and variance
+This indicates a **balanced bias–variance tradeoff**.
 
 ---
 
 # Model Strengths
 
-The model demonstrates several strengths:
+The model demonstrates:
 
-* Stable performance across cross-validation folds
-* Strong predictive power using a small number of features
-* Meaningful feature influence based on real movie metadata
-* Good balance between bias and variance
-
----
-
-# Potential Improvements
-
-Future improvements could include:
-
-* Incorporating **more textual features** from movie descriptions
-* Using **advanced embeddings** from movie overviews
-* Testing additional models such as **Gradient Boosting or XGBoost**
-* Expanding the dataset to include more movies
-
-These improvements could further increase prediction accuracy.
+* Strong performance across cross-validation
+* Good generalization on unseen data
+* Interpretability via feature importance
+* Robustness using ensemble learning (Random Forest)
 
 ---
 
 # Conclusion
 
-This project demonstrates a full machine learning workflow including:
+This project demonstrates a complete and production-ready machine learning workflow:
 
-* Feature engineering
-* Model training
-* Model comparison
-* Hyperparameter tuning
-* Explainable AI
-* Error analysis
+* Model comparison across multiple algorithms
+* Automated best model selection
+* Hyperparameter tuning using Optuna
+* Feature importance and explainability
+* Error analysis and performance evaluation
 
-The **Support Vector Machine (SVM)** model provided the best overall performance.
+The **Random Forest Classifier** emerged as the best-performing model, achieving strong results across both cross-validation and test datasets.
 
-Explainability techniques confirmed that the model relies on **meaningful movie metadata**, and error analysis provided insights for future improvements.
+Explainability analysis confirms that the model relies on **meaningful movie metadata**, ensuring that predictions are both **accurate and interpretable**.
 
-This analysis ensures that the model is not only accurate but also **interpretable and trustworthy**.
+This makes the system suitable for **real-world deployment via API**, with logging and monitoring capabilities already integrated.

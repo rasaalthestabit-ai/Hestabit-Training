@@ -4,7 +4,15 @@ import os
 import optuna
 
 from sklearn.model_selection import train_test_split, cross_val_score
-from sklearn.svm import SVC
+from sklearn.linear_model import LogisticRegression
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.neural_network import MLPClassifier
+
+from xgboost import XGBClassifier
+from lightgbm import LGBMClassifier
+
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler
 
 
 print("Loading dataset...")
@@ -15,7 +23,19 @@ print("Dataset shape:", df.shape)
 
 
 # ----------------------------
-# Features & Target
+# Load Best Model from train.py
+# ----------------------------
+
+with open("src/tuning/best_model.json", "r") as f:
+    data = json.load(f)
+
+best_model_name = data["best_model"]
+
+print("Tuning model:", best_model_name)
+
+
+# ----------------------------
+# Features
 # ----------------------------
 
 features = [
@@ -31,7 +51,7 @@ y = df["target"]
 
 
 # ----------------------------
-# Train Test Split
+# Split
 # ----------------------------
 
 X_train, X_test, y_train, y_test = train_test_split(
@@ -44,21 +64,58 @@ X_train, X_test, y_train, y_test = train_test_split(
 
 
 # ----------------------------
-# Optuna Objective
+# Objective Function
 # ----------------------------
 
 def objective(trial):
 
-    C = trial.suggest_float("C", 0.01, 100, log=True)
-    gamma = trial.suggest_float("gamma", 0.0001, 1, log=True)
-    kernel = trial.suggest_categorical("kernel", ["rbf", "poly", "sigmoid"])
+    if best_model_name == "logistic_regression":
+        C = trial.suggest_float("C", 0.01, 10, log=True)
 
-    model = SVC(
-        C=C,
-        gamma=gamma,
-        kernel=kernel,
-        probability=True
-    )
+        model = Pipeline([
+            ("scaler", StandardScaler()),
+            ("model", LogisticRegression(C=C, max_iter=2000))
+        ])
+
+    elif best_model_name == "random_forest":
+        model = RandomForestClassifier(
+            n_estimators=trial.suggest_int("n_estimators", 100, 300),
+            max_depth=trial.suggest_int("max_depth", 3, 20),
+            random_state=42
+        )
+
+    elif best_model_name == "xgboost":
+        model = XGBClassifier(
+            n_estimators=trial.suggest_int("n_estimators", 100, 300),
+            max_depth=trial.suggest_int("max_depth", 3, 10),
+            learning_rate=trial.suggest_float("learning_rate", 0.01, 0.3),
+            use_label_encoder=False,
+            eval_metric='logloss',
+            random_state=42
+        )
+
+    elif best_model_name == "lightgbm":
+        model = LGBMClassifier(
+            n_estimators=trial.suggest_int("n_estimators", 100, 300),
+            learning_rate=trial.suggest_float("learning_rate", 0.01, 0.3),
+            random_state=42
+        )
+
+    elif best_model_name == "neural_network":
+        model = Pipeline([
+            ("scaler", StandardScaler()),
+            ("model", MLPClassifier(
+                hidden_layer_sizes=trial.suggest_categorical(
+                    "hidden_layer_sizes",
+                    [(64,), (128, 64), (128, 64, 32)]
+                ),
+                max_iter=300,
+                random_state=42
+            ))
+        ])
+
+    else:
+        raise ValueError("Unknown model")
 
     scores = cross_val_score(
         model,
@@ -72,42 +129,30 @@ def objective(trial):
 
 
 # ----------------------------
-# Run Study
+# Run Optuna
 # ----------------------------
 
-print("Starting hyperparameter tuning...")
+print("\nStarting tuning...")
 
 study = optuna.create_study(direction="maximize")
+study.optimize(objective, n_trials=50)
 
-study.optimize(objective, n_trials=30)
-
-print("Tuning finished.")
-
-
-# ----------------------------
-# Best Parameters
-# ----------------------------
-
-best_params = study.best_params
-best_score = study.best_value
-
-print("Best parameters:", best_params)
-print("Best CV F1:", best_score)
+print("Tuning completed.")
 
 
 # ----------------------------
 # Save Results
 # ----------------------------
 
-os.makedirs("src/tuning", exist_ok=True)
-
 results = {
-    "best_model": "SVM",
-    "best_parameters": best_params,
-    "best_f1_score": best_score
+    "best_model": best_model_name,
+    "best_parameters": study.best_params,
+    "best_f1_score": study.best_value
 }
+
+os.makedirs("src/tuning", exist_ok=True)
 
 with open("src/tuning/results.json", "w") as f:
     json.dump(results, f, indent=4)
 
-print("Tuning results saved -> src/tuning/results.json")
+print("Results saved -> src/tuning/results.json")

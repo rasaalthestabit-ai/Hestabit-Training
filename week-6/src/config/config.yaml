@@ -1,0 +1,38 @@
+logs:
+  log_file: src/logs/pipeline.log
+  prediction_log_file: src/logs/prediction_logs.csv
+  level: INFO
+
+data:
+  raw_path: src/data/raw/netflix_titles.csv
+  processed_path: src/data/processed/final.csv
+
+model:
+  path: src/models/best_model.pkl
+  version: v1
+
+api:
+  host: 0.0.0.0
+  port: 8000
+  debug: true
+
+target_column: rating
+
+drop_columns:
+  - show_id
+  - title
+  - description
+
+outliers:
+  threshold: 3
+
+scaling:
+  method: standard
+
+split:
+  train_size: 0.7
+  val_size: 0.15
+  test_size: 0.15
+
+class_imbalance:
+  use_smote: true
