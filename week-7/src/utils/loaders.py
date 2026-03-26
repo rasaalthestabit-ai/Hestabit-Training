@@ -13,7 +13,7 @@ def load_pdf(file_path):
             for i, page in enumerate(pdf.pages):
 
                 # ✅ Limit pages (avoid long processing)
-                if i > 10:
+                if i > 100:
                     print(f"⚠️ Skipping long PDF: {file_path}")
                     break
 
