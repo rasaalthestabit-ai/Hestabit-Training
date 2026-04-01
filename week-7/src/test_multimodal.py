@@ -3,6 +3,9 @@ from embeddings.clip_embedder import CLIPEmbedder
 from vectorstore.faiss_store import FAISSStore
 from generator.llm_client import LLMClient
 from retriever.image_search import ImageSearch
+from generator.image_generator import ImageGenerator
+from generator.contextual_caption_generator import ContextualCaptionGenerator
+
 
 
 class MultimodalTester:
@@ -20,6 +23,13 @@ class MultimodalTester:
 
         self.search = ImageSearch()
 
+        self.image_generator = ImageGenerator()
+
+        self.context_generator = ContextualCaptionGenerator(
+            self.image_generator,
+            self.llm
+        )
+
         print("✅ System ready!\n")
 
     # -------------------------------
@@ -30,16 +40,9 @@ class MultimodalTester:
 
         results = self.search.text_to_image(query)
 
-        if not results:
-            print("❌ No results found")
-            return
-
-        print("\n🔍 Top Matching Images:")
-
         for i, r in enumerate(results):
             print(f"\n{i+1}. 📁 Image: {r['image']}")
-            print(f"   📝 Stored Caption: {r['stored_caption']}")
-            print(f"   🤖 Generated Caption: {r['generated_caption']}")
+            print(f"   🤖 Final Caption: {r['final_caption']}")
 
     # -------------------------------
     # 2. IMAGE → IMAGE
@@ -53,15 +56,9 @@ class MultimodalTester:
 
         results = self.search.image_to_image(image_path)
 
-        if not results:
-            print("❌ No results found")
-            return
-
-        print("\n🔍 Similar Images:")
-
         for i, r in enumerate(results):
             print(f"\n{i+1}. 📁 Image: {r['image']}")
-            print(f"   🤖 Generated Caption: {r['generated_caption']}")
+            print(f"   🤖 Final Caption: {r['final_caption']}")
 
     # -------------------------------
     # 3. IMAGE → TEXT ANSWER
