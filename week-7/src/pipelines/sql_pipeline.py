@@ -68,6 +68,12 @@ class SQLPipeline:
         print("\n✅ Final Answer:")
         print(answer)
 
+        return {
+            "sql": sql_query,
+            "result": results,
+            "answer": answer
+        }
+
 
 # -------------------------------
 # RUN

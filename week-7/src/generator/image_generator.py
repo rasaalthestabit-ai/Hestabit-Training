@@ -23,8 +23,14 @@ class ImageGenerator:
     def answer_question(self, image_path, question):
         image = Image.open(image_path).convert("RGB")
 
-        inputs = self.processor(image, question, return_tensors="pt")
-        output = self.model.generate(**inputs)
+        prompt = f"Question: {question} Answer:"
+
+        inputs = self.processor(image, prompt, return_tensors="pt")
+
+        output = self.model.generate(
+            **inputs,
+            max_new_tokens=50
+        )
 
         answer = self.processor.decode(output[0], skip_special_tokens=True)
         return answer

@@ -1,5 +1,8 @@
 from groq import Groq
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 class LLMClient:
     def __init__(self):

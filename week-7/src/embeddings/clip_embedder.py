@@ -31,11 +31,19 @@ class CLIPEmbedder:
         return features.cpu().numpy()
 
     def embed_text(self, text):
-        inputs = self.processor(text=[text], return_tensors="pt", padding=True)
+        # 🔥 FIX: enforce CLIP token limit (77)
+        inputs = self.processor(
+            text=[text],
+            return_tensors="pt",
+            padding=True,
+            truncation=True,     # ✅ IMPORTANT
+            max_length=77        # ✅ HARD LIMIT
+        )
 
         with torch.no_grad():
             outputs = self.model.get_text_features(**inputs)
 
+        # 🔥 FORCE EXTRACT TENSOR (handles ALL cases)
         if isinstance(outputs, torch.Tensor):
             features = outputs
         elif hasattr(outputs, "text_embeds"):
@@ -45,6 +53,7 @@ class CLIPEmbedder:
         else:
             raise ValueError(f"Unexpected output type: {type(outputs)}")
 
+        # ✅ Normalize
         features = features / features.norm(dim=-1, keepdim=True)
 
         return features.cpu().numpy()

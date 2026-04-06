@@ -14,12 +14,14 @@ class ImageSearch:
         )
         self.generator = ImageGenerator()
         self.llm = LLMClient()
+
         self.context_generator = ContextualCaptionGenerator(
-        self.generator,
-        self.llm)
+            self.generator,
+            self.llm
+        )
 
     # -------------------------------
-    # TEXT → IMAGE (WITH GENERATED CAPTION)
+    # TEXT → IMAGE
     # -------------------------------
     def text_to_image(self, query, k=3):
         vector = self.embedder.embed_text(query)
@@ -38,7 +40,7 @@ class ImageSearch:
         return final_results
 
     # -------------------------------
-    # IMAGE → IMAGE (WITH GENERATED CAPTION)
+    # IMAGE → IMAGE
     # -------------------------------
     def image_to_image(self, image_path, k=3):
         vector = self.embedder.embed_image(image_path)
@@ -57,18 +59,42 @@ class ImageSearch:
         return final_results
 
     # -------------------------------
-    # IMAGE → TEXT (FULL QA)
+    # IMAGE → TEXT (FIXED VQA)
     # -------------------------------
     def image_to_text(self, image_path, question, k=3):
-        vector = self.embedder.embed_image(image_path)
-        results = self.store.search(vector, k)
+        try:
+            # ---------------------------
+            # STEP 1: Generate caption
+            # ---------------------------
+            caption = self.generator.generate_caption(image_path)
 
-        if not results:
-            return "❌ No context found"
+            # ---------------------------
+            # STEP 2: Direct VQA
+            # ---------------------------
+            direct_answer = self.generator.answer_question(image_path, question)
 
-        best = results[0]
+            # ---------------------------
+            # STEP 3: LLM refinement (VERY IMPORTANT)
+            # ---------------------------
+            prompt = f"""
+    You are a vision AI assistant.
 
-        # 🔥 Direct VQA
-        answer = self.generator.answer_question(best["path"], question)
+    Image description:
+    {caption}
 
-        return answer
+    User question:
+    {question}
+
+    Initial answer:
+    {direct_answer}
+
+    Give a clear, specific, and correct answer.
+    Avoid generic words like "infographic" unless absolutely certain.
+    """
+
+            final_answer = self.llm.generate(prompt)
+
+            return final_answer
+
+        except Exception as e:
+            return f"Error: {str(e)}"

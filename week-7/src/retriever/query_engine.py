@@ -18,38 +18,56 @@ class QueryEngine:
         self.reranker = Reranker(self.embedder)
         self.builder = ContextBuilder()
 
-    def query(self, text, k=5, filters=None):
-        # ---------------------------
-        # STEP 1: HYBRID RETRIEVAL
-        # ---------------------------
-        results = self.retriever.hybrid_search(text, k=10)
+    # def query(self, text, k=5, filters=None):
+    #     # ---------------------------
+    #     # STEP 1: HYBRID RETRIEVAL
+    #     # ---------------------------
+    #     results = self.retriever.hybrid_search(text, k=10)
 
-        # ---------------------------
-        # STEP 2: APPLY FILTERS
-        # ---------------------------
+    #     # ---------------------------
+    #     # STEP 2: APPLY FILTERS
+    #     # ---------------------------
+    #     if filters:
+    #         results = self.builder.apply_filters(results, filters)
+
+    #     # ---------------------------
+    #     # STEP 3: RERANK
+    #     # ---------------------------
+    #     results = self.reranker.rerank(text, results)
+
+    #     # ---------------------------
+    #     # STEP 4: DEDUPLICATE
+    #     # ---------------------------
+    #     results = self.builder.deduplicate(results)
+
+    #     # ---------------------------
+    #     # STEP 5: TOP-K SELECTION
+    #     # ---------------------------
+    #     top_results = results[:k]
+
+    #     # ---------------------------
+    #     # STEP 6: BUILD CONTEXT
+    #     # ---------------------------
+    #     context = self.builder.build(top_results)
+
+    #     return top_results, context
+
+
+    def query(self, text, k=5, filters=None):
+        results = self.retriever.hybrid_search(text, k=10)
+    
+        if not results:
+            return [], ""
+    
         if filters:
             results = self.builder.apply_filters(results, filters)
-
-        # ---------------------------
-        # STEP 3: RERANK
-        # ---------------------------
+    
         results = self.reranker.rerank(text, results)
-
-        # ---------------------------
-        # STEP 4: DEDUPLICATE
-        # ---------------------------
         results = self.builder.deduplicate(results)
-
-        # ---------------------------
-        # STEP 5: TOP-K SELECTION
-        # ---------------------------
+    
         top_results = results[:k]
-
-        # ---------------------------
-        # STEP 6: BUILD CONTEXT
-        # ---------------------------
         context = self.builder.build(top_results)
-
+    
         return top_results, context
 
 
