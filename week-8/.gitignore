@@ -1,4 +1,80 @@
-venv/
+# =========================
+# Python
+# =========================
 __pycache__/
-data/
-.env
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual environments
+venv/
+.env/
+.venv/
+
+# =========================
+# Jupyter
+# =========================
+.ipynb_checkpoints/
+
+# =========================
+# Data files (keep only if needed)
+# =========================
+# Raw / intermediate data
+src/data/raw_data.jsonl
+src/data/cleaned_data.jsonl
+
+# Optional: ignore all generated datasets
+# src/data/*.jsonl
+
+# =========================
+# Model files (VERY IMPORTANT)
+# =========================
+# Large model weights
+*.safetensors
+*.bin
+*.pt
+*.pth
+
+# Quantized / merged models
+models/
+quantized/
+*.gguf
+
+# If you want to keep configs but not weights:
+!**/config.json
+!**/generation_config.json
+!**/tokenizer_config.json
+!**/tokenizer.json
+!**/chat_template.jinja
+
+# =========================
+# Logs & temp files
+# =========================
+*.log
+logs/
+tmp/
+temp/
+
+# =========================
+# OS / Editor junk
+# =========================
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# =========================
+# HuggingFace / cache
+# =========================
+.cache/
+huggingface/
+hf_cache/
+
+# =========================
+# Misc
+# =========================
+*.bak
+*.swp
+*.swo
