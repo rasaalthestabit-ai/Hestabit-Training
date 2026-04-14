@@ -1,0 +1,49 @@
+# -----------------------------
+# BASE IMAGE
+# -----------------------------
+FROM python:3.10-slim
+
+# -----------------------------
+# SYSTEM DEPENDENCIES
+# -----------------------------
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+# -----------------------------
+# WORKDIR
+# -----------------------------
+WORKDIR /app
+
+# -----------------------------
+# COPY PROJECT
+# -----------------------------
+COPY . /app
+
+# -----------------------------
+# INSTALL PYTHON DEPENDENCIES
+# -----------------------------
+RUN pip install --no-cache-dir \
+    fastapi \
+    uvicorn \
+    llama-cpp-python \
+    pydantic \
+    streamlit \
+    requests
+
+# -----------------------------
+# ENV VARIABLES
+# -----------------------------
+ENV MODEL_PATH=quantized/model.gguf
+ENV PYTHONUNBUFFERED=1
+
+# -----------------------------
+# EXPOSE PORT
+# -----------------------------
+EXPOSE 8000
+
+# -----------------------------
+# RUN SERVER
+# -----------------------------
+CMD ["uvicorn", "deploy.app:app", "--host", "0.0.0.0", "--port", "8000"]
