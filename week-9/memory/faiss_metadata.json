@@ -1,0 +1,41 @@
+[
+  {
+    "chunk_id": "episodic_1776687121874",
+    "text": "Session topics: Hi I am Rasaal; What is Agentic AI?; Tell me more about it.",
+    "source": "episodic",
+    "timestamp": 1776687121.8747444,
+    "metadata": {
+      "session_id": "cli_test",
+      "episode_id": "f219e6f1-72cc-496d-b319-33ab8a73d435"
+    }
+  },
+  {
+    "chunk_id": "episodic_1776687177535",
+    "text": "Session topics: who am I?",
+    "source": "episodic",
+    "timestamp": 1776687177.5353932,
+    "metadata": {
+      "session_id": "cli_test",
+      "episode_id": "3cb7ceed-a16c-4908-a4f5-91a71a41316f"
+    }
+  },
+  {
+    "chunk_id": "fact_1776873672393",
+    "text": "what was i working on last time",
+    "source": "fact",
+    "timestamp": 1776873672.393992,
+    "metadata": {
+      "topic": "user_statement"
+    }
+  },
+  {
+    "chunk_id": "episodic_1776873716595",
+    "text": "Session topics: who am I?; yes; I want to understand the concept of neural networks; what was i working on last time; lets continue with neural network architecture",
+    "source": "episodic",
+    "timestamp": 1776873716.5958097,
+    "metadata": {
+      "session_id": "cli_test",
+      "episode_id": "03119345-7b10-426d-8801-d050c280023f"
+    }
+  }
+]
