@@ -1,7 +1,7 @@
 const http = require("http");
 
 const server = http.createServer((req, res) => {
-  res.end("Docker Day 1 Running 🚀");
+  res.end("Docker Day 1 Running");
 });
 
 server.listen(3000, () => {

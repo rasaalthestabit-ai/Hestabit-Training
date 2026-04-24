@@ -1,1 +1,168 @@
+# =====================================================
+# GLOBAL .gitignore — Week 1 to Week 9 Projects
+# Covers Python, AI Agents, FastAPI, Streamlit,
+# Vector DBs, logs, outputs, local configs, IDE files
+# =====================================================
+
+# -----------------------------
+# Python
+# -----------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+downloads/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# -----------------------------
+# Virtual Environments
+# -----------------------------
+venv/
+.venv/
+env/
+ENV/
+pythonenv/
+
+# -----------------------------
+# Environment Variables / Secrets
+# -----------------------------
+.env
+.env.*
+!.env.example
+secrets.json
+config.local.json
+
+# -----------------------------
+# Jupyter
+# -----------------------------
+.ipynb_checkpoints/
+
+# -----------------------------
+# Testing / Coverage
+# -----------------------------
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.cache/
+
+# -----------------------------
+# Logs
+# -----------------------------
+logs/
+*.log
+*.out
+*.err
+
+# -----------------------------
+# Runtime / Temp
+# -----------------------------
+*.pid
+*.seed
+*.tmp
+*.temp
+tmp/
+temp/
+.cache/
+
+# -----------------------------
+# Databases
+# -----------------------------
+*.db
+*.sqlite
+*.sqlite3
+*.duckdb
+
+# -----------------------------
+# Vector Databases / Embeddings
+# -----------------------------
+faiss_index/
+chroma_db/
+chroma/
+vector_store/
+embeddings/
+index_store/
+storage/
+
+# -----------------------------
+# AI Agent Outputs
+# -----------------------------
+outputs/
+artifacts/
+reports/
+exports/
+generated/
+cache/
+
+# -----------------------------
+# Streamlit
+# -----------------------------
+.streamlit/secrets.toml
+
+# -----------------------------
+# FastAPI / Uvicorn
+# -----------------------------
+*.pid
+uvicorn.log
+
+# -----------------------------
+# Frontend / Node (if used)
+# -----------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# -----------------------------
+# IDEs
+# -----------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# -----------------------------
+# OS Files
+# -----------------------------
+.DS_Store
+Thumbs.db
+
+# -----------------------------
+# Training Specific
+# -----------------------------
+/data/
+/memory/
+/session_store/
+checkpoints/
+agent_memory/
+conversation_history/
+
+# -----------------------------
+# Ignore local experiment files
+# -----------------------------
+playground/
+sandbox/
+trial/
+experiments/
+
+# -----------------------------
+# Keep important examples
+# -----------------------------
+!important_example.py
 node_modules

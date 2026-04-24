@@ -117,10 +117,10 @@ def _run_file_only(query: str) -> str:
 
     fp = make_file_proxy()
 
-    # 🔥 STEP 1: Execute tool FIRST (this is the fix)
+    # STEP 1: Execute tool FIRST (this is the fix)
     tool_result = fp._dispatch(query.lower())
 
-    # 🔥 STEP 2: Send real data to LLM for summarization
+    # STEP 2: Send real data to LLM for summarization
     r = fp.initiate_chat(
         file_agent,
         message=(

@@ -1,0 +1,13 @@
+model,type,tokens_per_sec,latency_sec,vram_gb,response
+base,QA,32.6,1.843,2.2,"Leave policy is a critical aspect of HR management as it helps in managing employee absenteeism, reducing employee turno"
+base,Extraction,33.3,0.51,2.2,John worked as a HR Manager for 2 years at Infosys.
+base,Reasoning,31.0,1.933,2.2,HR should immediately terminate the employee and notify the company's legal department. The legal department will invest
+fine_tuned,QA,12.9,1.864,0.82,"In HR, the leave policy refers to rules governing employee time off including sick leave and vacation."
+fine_tuned,Extraction,4.7,6.442,0.82,"{""name"": ""John"", ""role"": ""HR Manager"", ""company"": ""Infosys"", ""years"": 2}"
+fine_tuned,Reasoning,9.5,3.25,0.82,"Based on the frequency of the issue, HR should initiate disciplinary action. Continued behavior may require stricter mea"
+quantised_4bit,QA,6.4,9.412,0.77,The company has a flexible and generous leave policy that allows employees to take time off work to care for their famil
+quantised_4bit,Extraction,7.6,2.248,0.77,John worked as a HR Manager for 2 years at Infosys.
+quantised_4bit,Reasoning,5.7,10.594,0.77,HR should immediately terminate the employee and inform the company's HR department. The HR department will then investi
+gguf_cpu,QA,3.0,7.756,0.0,"In HR, the leave policy refers to rules governing employee time off including sick leave and vacation."
+gguf_cpu,Extraction,3.6,8.011,0.0,"{""name"": ""John"", ""role"": ""HR Manager"", ""company"": ""Infosys"", ""years"": 2}"
+gguf_cpu,Reasoning,2.9,8.881,0.0,HR should initiate disciplinary action because repeated issues may require stronger measures. Further steps may be neede

@@ -1,3 +1,0 @@
-request_id,timestamp,input,prediction3b539c49-001d-40da-9e6e-c27dc128fd5f,2026-03-23T07:59:03.419274,"{""Runtime"": 120.0, ""Meta_score"": 75.0, ""No_of_Votes"": 150000.0, ""Gross"": 50000000.0, ""movie_age"": 5.0}",1,0.72
-8b72f19e-0296-418c-a64a-a3731b0924a3,2026-03-23T08:04:13.962938,"{""Runtime"": 120.0, ""Meta_score"": 75.0, ""No_of_Votes"": 150000.0, ""Gross"": 50000000.0, ""movie_age"": 5.0}",1,0.72
-530d9563-0a37-4a78-9592-a8c3b3618039,2026-03-23T08:04:16.371829,"{""Runtime"": 120.0, ""Meta_score"": 75.0, ""No_of_Votes"": 150000.0, ""Gross"": 50000000.0, ""movie_age"": 5.0}",1,0.72

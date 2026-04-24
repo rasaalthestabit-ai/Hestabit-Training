@@ -1,0 +1,1 @@
+SQL> DESC CUSTOMERS;| Field | Type | mu1z | Key | Default | extra ||p | ant (a1) Jno | Rt | I || name | varchar(2e) | No | Il | I[ace = | int (a1) [No | i | i| apoRESS | char(25) lyes | [wu | i| satary | decima(18, 2) | Yes | Jw | i5 rows in set (. 00 sec)

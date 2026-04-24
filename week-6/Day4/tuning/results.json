@@ -1,0 +1,9 @@
+{
+    "best_model": "xgboost",
+    "best_parameters": {
+        "n_estimators": 260,
+        "max_depth": 3,
+        "learning_rate": 0.11438140934862076
+    },
+    "best_f1_score": 0.7376292312279634
+}

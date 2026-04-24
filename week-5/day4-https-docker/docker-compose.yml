@@ -3,6 +3,8 @@ services:
   backend:
     build: ./backend
     container_name: backend
+    ports:
+      - "3000:3000"
 
   nginx:
     image: nginx:latest

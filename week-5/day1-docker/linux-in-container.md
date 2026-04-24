@@ -4,8 +4,7 @@
 
 docker images
 docker history node-day1-docker
-
-Image size: 192MB (Node runtime + npm + app)
+docker build -t image_name .
 
 Each Dockerfile instruction creates a layer
 
@@ -13,7 +12,7 @@ Each Dockerfile instruction creates a layer
 
 ## 2. Run Container
 
-docker run -d -p 3000:3000 --name day1-container node-day1-docker
+docker run -d -p 3000:3000 --name day1 day1-container
 
 Detached mode (-d), port mapping (-p), named container
 
